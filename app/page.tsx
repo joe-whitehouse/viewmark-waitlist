@@ -119,14 +119,22 @@ export default function Home() {
             </svg>
           </div>
           
-          {/* Contact Us Button */}
-          <a 
-            href="mailto:hello@viewmark.co"
-            className="contact-button"
-            aria-label="Contact us via email"
-          >
-            Contact
-          </a>
+          {/* Navigation */}
+          <div className="flex items-center space-x-4">
+            <a 
+              href="/platform"
+              className="text-sm text-gray-600 hover:text-gray-800 transition-colors"
+            >
+              Platform
+            </a>
+            <a 
+              href="mailto:hello@viewmark.co"
+              className="contact-button"
+              aria-label="Contact us via email"
+            >
+              Contact
+            </a>
+          </div>
         </div>
       </header>
 
