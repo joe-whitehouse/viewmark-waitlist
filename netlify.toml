@@ -9,6 +9,12 @@
   package = "@netlify/plugin-nextjs"
 
 [[redirects]]
+  from = "http://viewmark.co/*"
+  to = "https://viewmark.co/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

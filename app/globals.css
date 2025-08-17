@@ -62,24 +62,24 @@ body {
 }
 
 /* Utility classes */
-.tracking--2 {
-  letter-spacing: -0.02em;
-}
+  .tracking--2 {
+    letter-spacing: -0.02em;
+  }
 
-.leading-plus4 {
-  line-height: calc(1em + 4px);
-}
+  .leading-plus4 {
+    line-height: calc(1em + 4px);
+  }
 
-.bg-page-gradient {
-  background: radial-gradient(
-    ellipse at center bottom,
-    #dde2ee 0%,
-    #e3e8f2 30%,
-    #eef2f8 60%,
-    #ffffff 80%,
-    #ffffff 100%
-  );
-}
+            .bg-page-gradient {
+            background: radial-gradient(
+              ellipse at center bottom,
+              #dde2ee 0%,
+              #e3e8f2 30%,
+              #eef2f8 60%,
+              #ffffff 80%,
+              #ffffff 100%
+            );
+          }
 
 /* Top Banner */
 .top-banner {
@@ -120,7 +120,7 @@ body {
   width: 100%;
   max-width: 1280px;
   padding: 8px 24px;
-  position: relative;
+    position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
