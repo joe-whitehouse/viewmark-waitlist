@@ -88,6 +88,25 @@ export default function PlatformPage() {
             </div>
           )}
         </div>
+
+        {/* Test Navigation Links */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-gray-500 mb-4">🧪 Test Mode - Direct Access:</p>
+          <div className="space-y-2">
+            <Link 
+              href="/platform/client"
+              className="block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              → Test Client Dashboard
+            </Link>
+            <Link 
+              href="/platform/clipper"
+              className="block text-sm text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              → Test Clipper Dashboard
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

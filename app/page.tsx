@@ -96,6 +96,16 @@ export default function Home() {
               xmlns="http://www.w3.org/2000/svg"
               className="logo"
               aria-label="Viewmark Logo"
+              onClick={() => window.location.reload()}
+              style={{ cursor: 'pointer' }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  window.location.reload();
+                }
+              }}
             >
               <g clipPath="url(#clip0_6_20)">
                 <path d="M30.3 75V150H0V75" fill="currentColor"/>
@@ -121,12 +131,6 @@ export default function Home() {
           
           {/* Navigation */}
           <div className="flex items-center space-x-4">
-            <a 
-              href="/platform"
-              className="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-            >
-              Platform
-            </a>
             <a 
               href="mailto:hello@viewmark.co"
               className="contact-button"
@@ -203,7 +207,7 @@ export default function Home() {
               <div className="success-message" role="status">
                 <div className="success-content">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="white"/>
+                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
                   </svg>
                   <span>You&apos;re on the waitlist!</span>
                 </div>
