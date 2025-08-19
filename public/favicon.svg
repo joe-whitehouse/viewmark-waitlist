@@ -1,27 +1,46 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- White Background with Rounded Corners -->
-  <rect width="32" height="32" rx="1" fill="white"/>
-  
-  <!-- VM Logo (centered) -->
-  <g transform="translate(8, 8) scale(0.05)">
-    <g clip-path="url(#clip0_6_20)">
-      <path d="M30.3 75V150H0V75" fill="black"/>
-      <path d="M30.2998 75V0H60.5998V75" fill="black"/>
-      <path d="M30.2998 150L60.5998 75H90.9998L60.5998 150" fill="black"/>
-      <path d="M91 75L121.3 0H151.6L121.3 75" fill="black"/>
-      <path d="M333.8 75V0H364.1V75" fill="black"/>
-      <path d="M333.8 75V150H303.5V75" fill="black"/>
-      <path d="M333.8 0L303.5 75H273.1L303.5 0" fill="black"/>
-      <path d="M273.1 75L242.8 150H212.5L242.8 75" fill="black"/>
-      <path d="M212.5 75V0H242.8V75" fill="black"/>
-      <path d="M212.5 75V150H182.2V75" fill="black"/>
-      <path d="M212.5 0L182.2 75H151.9L182.2 0" fill="black"/>
-      <path d="M151.9 75L121.5 150H91.2002L121.5 75" fill="black"/>
-    </g>
-    <defs>
-      <clipPath id="clip0_6_20">
-        <rect width="364.1" height="150" fill="white"/>
-      </clipPath>
-    </defs>
-  </g>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_i_29_476)">
+<rect width="100" height="100" rx="30" fill="white"/>
+</g>
+<rect x="0.5" y="0.5" width="99" height="99" rx="29.5" stroke="url(#paint0_linear_29_476)"/>
+<g filter="url(#filter1_d_29_476)">
+<path d="M18.2414 50.449V65.8978H12L12 50.449" fill="black"/>
+<path d="M18.2422 50.4489L18.2422 35H24.4836V50.4489" fill="black"/>
+<path d="M18.2422 65.8978L24.4836 50.449H30.7455L24.4836 65.8978" fill="black"/>
+<path d="M30.7441 50.4489L36.9855 35H43.2269L36.9855 50.4489" fill="black"/>
+<path d="M80.7588 50.4489V35H87.0002V50.4489" fill="black"/>
+<path d="M80.758 50.449V65.8978H74.5166V50.449" fill="black"/>
+<path d="M80.7592 35L74.5178 50.4489H68.2559L74.5178 35" fill="black"/>
+<path d="M68.2552 50.449L62.0138 65.8978H55.7725L62.0138 50.449" fill="black"/>
+<path d="M55.7725 50.4489V35H62.0138V50.4489" fill="black"/>
+<path d="M55.7726 50.449V65.8978H49.5312V50.449" fill="black"/>
+<path d="M55.7718 35L49.5304 50.4489H43.2891L49.5304 35" fill="black"/>
+<path d="M43.2895 50.449L37.0275 65.8978H30.7861L37.0275 50.449" fill="black"/>
+</g>
+<defs>
+<filter id="filter0_i_29_476" x="0" y="0" width="100" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_29_476"/>
+</filter>
+<filter id="filter1_d_29_476" x="11" y="34" width="77" height="32.8979" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_29_476"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_29_476" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_29_476" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#DDDDDD"/>
+</linearGradient>
+</defs>
 </svg>
