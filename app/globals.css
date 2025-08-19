@@ -134,7 +134,7 @@ body {
 }
 
 .logo {
-  color: var(--foreground);
+  color: #000000;
   outline: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
