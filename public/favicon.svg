@@ -1,15 +1,9 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Glass Background -->
-  <rect width="32" height="32" rx="8" fill="url(#glassGradient)"/>
+  <!-- White Background with Rounded Corners -->
+  <rect width="32" height="32" rx="1" fill="white"/>
   
-  <!-- Glass Border and Effects -->
-  <rect width="32" height="32" rx="8" fill="none" stroke="rgba(255, 255, 255, 0.9)" stroke-width="1"/>
-  
-  <!-- Inner Glass Highlight -->
-  <rect x="2" y="2" width="28" height="14" rx="6" fill="rgba(255, 255, 255, 0.3)"/>
-  
-  <!-- VM Logo (scaled and centered) -->
-  <g transform="translate(4, 8) scale(0.065)">
+  <!-- VM Logo (centered) -->
+  <g transform="translate(8, 8) scale(0.05)">
     <g clip-path="url(#clip0_6_20)">
       <path d="M30.3 75V150H0V75" fill="black"/>
       <path d="M30.2998 75V0H60.5998V75" fill="black"/>
@@ -30,13 +24,4 @@
       </clipPath>
     </defs>
   </g>
-  
-  <!-- Gradients -->
-  <defs>
-    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:rgb(248, 250, 252);stop-opacity:1" />
-      <stop offset="50%" style="stop-color:rgb(241, 245, 249);stop-opacity:1" />
-      <stop offset="100%" style="stop-color:rgb(226, 232, 240);stop-opacity:1" />
-    </linearGradient>
-  </defs>
 </svg>
