@@ -11,14 +11,6 @@ const abcoracleBook = localFont({
   fallback: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto'],
 });
 
-const abcoracleLight = localFont({
-  src: '../public/ABCOracle-Light.woff2',
-  variable: '--font-abcoracle-light',
-  display: 'optional',
-  preload: true,
-  fallback: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto'],
-});
-
 const abcfavoritMono = localFont({
   src: '../public/ABCFavoritMono-Regular.woff2',
   variable: '--font-abcfavorit-mono',
@@ -50,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${abcoracleBook.variable} ${abcoracleLight.variable} ${abcfavoritMono.variable}`}>
+    <html lang="en" className={`${abcoracleBook.variable} ${abcfavoritMono.variable}`}>
       <body>{children}</body>
     </html>
   );

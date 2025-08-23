@@ -5,7 +5,6 @@
 /* CSS Variables for optimized fonts */
 :root {
   --font-abcoracle-book: var(--font-abcoracle-book);
-  --font-abcoracle-light: var(--font-abcoracle-light);
   --font-abcfavorit-mono: var(--font-abcfavorit-mono);
 }
 
@@ -205,7 +204,7 @@ body {
 .headline {
   text-align: center;
   font-size: 64px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 68px;
   margin-bottom: 24px;
   font-family: var(--font-abcoracle-book), sans-serif;
@@ -226,7 +225,7 @@ body {
 .subheader {
   text-align: center;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 26px;
   margin-bottom: 32px;
   font-family: var(--font-abcoracle-book), sans-serif;
