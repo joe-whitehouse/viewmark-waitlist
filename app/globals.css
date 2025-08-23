@@ -2,29 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom font declarations - Updated for proper styling */
-@font-face {
-  font-family: 'ABCOracle-Book';
-  src: url('/ABCOracle-Book.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ABCOracle-Light';
-  src: url('/ABCOracle-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'ABCFavoritMono';
-  src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/* CSS Variables for optimized fonts */
+:root {
+  --font-abcoracle-book: var(--font-abcoracle-book);
+  --font-abcoracle-light: var(--font-abcoracle-light);
+  --font-abcfavorit-mono: var(--font-abcfavorit-mono);
 }
 
 :root {
@@ -53,7 +35,7 @@ body {
   padding: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: 'ABCOracle-Book', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  font-family: var(--font-abcoracle-book), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.02em;
@@ -226,7 +208,7 @@ body {
   font-weight: 300;
   line-height: 68px;
   margin-bottom: 24px;
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: var(--font-abcoracle-book), sans-serif;
   letter-spacing: -0.04em;
 }
 
@@ -247,7 +229,7 @@ body {
   font-weight: 300;
   line-height: 26px;
   margin-bottom: 32px;
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: var(--font-abcoracle-book), sans-serif;
   letter-spacing: -0.02em;
   color: var(--tertiary-text);
 }
@@ -522,7 +504,7 @@ body {
   font-size: clamp(10px, 2.5vw, 12px);
   line-height: calc(1em + 4px);
   text-transform: uppercase;
-  font-family: 'ABCFavoritMono', monospace;
+  font-family: var(--font-abcfavorit-mono), monospace;
   letter-spacing: 0.1em;
   color: rgba(0, 0, 0, 0.6);
   white-space: nowrap;
