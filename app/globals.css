@@ -225,15 +225,15 @@ body {
 .headline-primary {
   color: var(--primary-text);
   text-shadow: 
-    0px -1px 0px rgba(255, 255, 255, 0.3),
-    0px 1px 0px rgba(0, 0, 0, 0.1);
+    -1px -1px 0px rgba(255, 255, 255, 0.3),
+    1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 .headline-secondary {
   color: var(--primary-text);
   text-shadow: 
-    0px -1px 0px rgba(255, 255, 255, 0.3),
-    0px 1px 0px rgba(0, 0, 0, 0.1);
+    -1px -1px 0px rgba(255, 255, 255, 0.3),
+    1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* Subheader */
