@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Variables for optimized fonts */
-:root {
-  --font-abcoracle-book: var(--font-abcoracle-book);
-  --font-abcfavorit-mono: var(--font-abcfavorit-mono);
+/* Custom font declarations */
+@font-face {
+  font-family: 'ABCOracle-Book';
+  src: url('/ABCOracle-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABCFavoritMono';
+  src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -34,7 +45,7 @@ body {
   padding: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-abcoracle-book), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  font-family: 'ABCOracle-Book', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.02em;
@@ -207,7 +218,7 @@ body {
   font-weight: 400;
   line-height: 68px;
   margin-bottom: 24px;
-  font-family: var(--font-abcoracle-book), sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
   letter-spacing: -0.04em;
 }
 
@@ -228,7 +239,7 @@ body {
   font-weight: 400;
   line-height: 26px;
   margin-bottom: 32px;
-  font-family: var(--font-abcoracle-book), sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
   letter-spacing: -0.02em;
   color: var(--tertiary-text);
 }
@@ -503,7 +514,7 @@ body {
   font-size: clamp(10px, 2.5vw, 12px);
   line-height: calc(1em + 4px);
   text-transform: uppercase;
-  font-family: var(--font-abcfavorit-mono), monospace;
+  font-family: 'ABCFavoritMono', monospace;
   letter-spacing: 0.1em;
   color: rgba(0, 0, 0, 0.6);
   white-space: nowrap;
