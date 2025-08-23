@@ -219,7 +219,7 @@ body {
   line-height: 68px;
   margin-bottom: 24px;
   font-family: 'ABCOracle-Book', sans-serif;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.06em;
 }
 
 .headline-primary {
@@ -240,7 +240,7 @@ body {
   line-height: 26px;
   margin-bottom: 32px;
   font-family: 'ABCOracle-Book', sans-serif;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   color: var(--tertiary-text);
 }
 
