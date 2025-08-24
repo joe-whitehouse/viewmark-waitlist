@@ -142,77 +142,93 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Content - Single Column Layout */}
+      {/* Main Content - Two Column Layout */}
       <div className="main-content">
         <div className="content-container">
-          {/* Headline - Centered */}
-          <h1 className="headline">
-            <span className="headline-primary">Guerrilla marketing</span>
-            <br />
-            <span className="headline-secondary">for short form</span>
-          </h1>
-          
-          {/* Subheader - Centered */}
-          <p className="subheader">
-            <span className="desktop-only">
-              Put your brand on viral short-form videos with top creators.
-              <br />
-              Get seen, sell more, and scale faster.
-            </span>
-            <span className="mobile-only">
-              Put your brand on viral short-form videos
-              <br />
-              with top creators. Get seen, sell more,
-              <br />
-              and scale faster.
-            </span>
-          </p>
-          
-          {/* Email Form - Centered */}
-          <div className="form-container">
-            <form onSubmit={handleSubmit} className={`email-form ${showSuccess ? 'form-hidden' : ''}`} noValidate>
-              <div className="input-group">
-                <div className={`input-wrapper ${emailError ? 'input-error' : ''}`}>
-                  <input
-                    type="text"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                      if (emailError) setEmailError("");
-                    }}
-                    placeholder="name@work-email.com"
-                    aria-label="Work email address"
-                    className="email-input"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className={`submit-button ${isLoading ? 'loading' : ''}`}
-                  aria-label={isLoading ? "Submitting..." : "Join waitlist"}
-                >
-                  <span className={isLoading ? "invisible" : ""}>Join Waitlist</span>
-                  {isLoading && (
-                    <div className="loading-spinner" aria-hidden="true"></div>
-                  )}
-                </button>
-              </div>
+          <div className="two-column-layout">
+            {/* Left Column - Text Content */}
+            <div className="left-column">
+              {/* Headline */}
+              <h1 className="headline">
+                <span className="headline-primary">Guerrilla marketing</span>
+                <br />
+                <span className="headline-secondary">for short form</span>
+              </h1>
               
-              <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
-                {emailError || ' '}
+              {/* Subheader */}
+              <p className="subheader">
+                <span className="desktop-only">
+                  Put your brand on viral short-form videos with top creators.
+                  <br />
+                  Get seen, sell more, and scale faster.
+                </span>
+                <span className="mobile-only">
+                  Put your brand on viral short-form videos
+                  <br />
+                  with top creators. Get seen, sell more,
+                  <br />
+                  and scale faster.
+                </span>
               </p>
-            </form>
-            
-            {showSuccess && (
-              <div className="success-message" role="status">
-                <div className="success-content">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
-                  </svg>
-                  <span>You&apos;re on the waitlist!</span>
-                </div>
+              
+              {/* Email Form */}
+              <div className="form-container">
+                <form onSubmit={handleSubmit} className={`email-form ${showSuccess ? 'form-hidden' : ''}`} noValidate>
+                  <div className="input-group">
+                    <div className={`input-wrapper ${emailError ? 'input-error' : ''}`}>
+                      <input
+                        type="text"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (emailError) setEmailError("");
+                        }}
+                        placeholder="name@work-email.com"
+                        aria-label="Work email address"
+                        className="email-input"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className={`submit-button ${isLoading ? 'loading' : ''}`}
+                      aria-label={isLoading ? "Submitting..." : "Join waitlist"}
+                    >
+                      <span className={isLoading ? "invisible" : ""}>Join Waitlist</span>
+                      {isLoading && (
+                        <div className="loading-spinner" aria-hidden="true"></div>
+                      )}
+                    </button>
+                  </div>
+                  
+                  <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
+                    {emailError || ' '}
+                  </p>
+                </form>
+                
+                {showSuccess && (
+                  <div className="success-message" role="status">
+                    <div className="success-content">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                      </svg>
+                      <span>You&apos;re on the waitlist!</span>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
+            
+            {/* Right Column - Hero Image */}
+            <div className="right-column">
+              <div className="hero-image-container">
+                <img 
+                  src="/hero-3.png" 
+                  alt="Viewmark Hero Image" 
+                  className="hero-image"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
