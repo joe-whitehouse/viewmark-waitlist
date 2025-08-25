@@ -224,7 +224,7 @@ body {
 
 .left-column {
   flex: 1;
-  max-width: 600px;
+  max-width: 480px;
   padding-left: 24px;
 }
 
