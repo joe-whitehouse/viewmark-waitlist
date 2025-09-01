@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Viewmark",
-  description: "Put your brand on viral short-form videos with top creators. Get seen, sell more, and scale faster.",
+  description: "Join the waitlist",
   icons: {
     icon: [
       {
