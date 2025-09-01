@@ -87,7 +87,7 @@ html {
   background-attachment: scroll;
 }
 
-/* Safari-specific fixes for black bars and seamless background */
+/* Safari-specific fixes for black bars */
 @supports (-webkit-touch-callout: none) {
   body {
     /* iOS Safari specific */
@@ -95,7 +95,7 @@ html {
     -webkit-tap-highlight-color: transparent;
   }
   
-  /* Fix for Safari address bar black background and seamless edges */
+  /* Fix for Safari address bar black background */
   @media screen and (max-width: 768px) {
     body {
       background-color: #f8f9fa;
@@ -108,33 +108,6 @@ html {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      /* Force background to extend beyond viewport */
-      background-clip: border-box;
-      -webkit-background-clip: border-box;
-    }
-    
-    /* Additional mobile Safari background fix */
-    html {
-      background: 
-        radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%),
-        #f8f9fa;
-      background-attachment: scroll;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-    }
-    
-    /* Ensure no white edges on mobile */
-    * {
-      background-color: transparent;
-    }
-    
-    .bg-page-gradient {
-      background: none !important;
     }
   }
 }
@@ -219,7 +192,6 @@ body::before {
 
 /* Header */
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -228,10 +200,6 @@ body::before {
   padding: 0;
   margin: 0;
   height: 3rem;
-  /* Ensure sticky behavior works on all devices */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform;
 }
 
 .header-container {
@@ -359,8 +327,6 @@ body::before {
   align-items: center;
   flex: 1;
   min-height: 0;
-  /* Ensure sticky header works properly */
-  position: relative;
 }
 
 .content-container {
@@ -793,19 +759,6 @@ body::before {
     padding: 0 16px;
   }
   
-  .header {
-    /* Enhanced sticky behavior for mobile */
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    /* Ensure sticky works on all mobile devices */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    will-change: transform;
-    /* Mobile Safari sticky fix */
-    -webkit-overflow-scrolling: touch;
-  }
-  
   .logo-tag-container {
     position: absolute;
     top: 0;
@@ -983,23 +936,6 @@ body::before {
   
   .footer-container {
     padding: 0 16px;
-  }
-  
-  /* Aggressive mobile Safari background fix for very small screens */
-  @supports (-webkit-touch-callout: none) {
-    html, body {
-      background: 
-        radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.25) 0%, transparent 25%),
-        radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%),
-        #f8f9fa !important;
-      background-attachment: scroll !important;
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      min-height: 100vh !important;
-    }
   }
 }
 
