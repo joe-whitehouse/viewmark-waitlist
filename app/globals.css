@@ -297,7 +297,7 @@ html {
 
 .subheader {
   font-family: 'Inter', sans-serif;
-  font-size: 16px !important;
+  font-size: 18px !important;
   line-height: 1.4;
   text-align: center;
   margin: 0 0 32px 0;
@@ -739,12 +739,13 @@ html {
   }
   
   .subheader {
-    font-size: 16px !important;
+    font-size: 18px !important;
     line-height: 1.4;
     max-width: 90vw;
     text-align: center;
   }
   
+  /* Mobile line breaks for subheader */
   .mobile-break {
     display: inline;
   }
@@ -816,6 +817,10 @@ html {
   
   .headline {
     white-space: nowrap;
+  }
+  
+  .mobile-break {
+    display: none;
   }
 }
 

@@ -143,8 +143,8 @@ export default function Home() {
           
           {/* Subheader - Centered */}
           <p className="subheader">
-            Stop wasting money on ads no one watches. <br className="mobile-break" />
-            Get your brand or offer seen by <br className="mobile-break" />
+            Stop wasting money on ads no one <br className="mobile-break" />
+            watches. Get your brand seen by <br className="mobile-break" />
             millions who actually care.
           </p>
           
