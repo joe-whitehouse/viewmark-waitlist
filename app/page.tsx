@@ -135,12 +135,17 @@ export default function Home() {
         <div className="content-container">
           {/* Headline - Centered */}
           <h1 className="headline">
-            <span className="headline-primary">Put your logo on viral content</span>
+            <span className="headline-primary">
+              Put your logo on <br className="mobile-break" />
+              viral content
+            </span>
           </h1>
           
           {/* Subheader - Centered */}
           <p className="subheader">
-            Stop wasting money on ads no one watches. Get your brand or offer seen by millions who actually care.
+            Stop wasting money on ads no one watches. <br className="mobile-break" />
+            Get your brand or offer seen by <br className="mobile-break" />
+            millions who actually care.
           </p>
           
           {/* Email Form - Centered */}

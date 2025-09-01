@@ -69,6 +69,15 @@ body {
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  height: 100vh;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
 }
 
 /* Utility classes */
@@ -88,6 +97,11 @@ body {
               radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%),
               #f8f9fa;
           }
+
+.min-h-dvh {
+  margin: 0;
+  padding: 0;
+}
 
 /* Top Banner */
 .top-banner {
@@ -121,18 +135,20 @@ body {
   z-index: 10;
   display: flex;
   justify-content: center;
-  padding: 8px 0;
-  height: 4rem;
+  padding: 0;
+  margin: 0;
+  height: 3rem;
 }
 
 .header-container {
   width: 100%;
   max-width: 1600px;
-  padding: 8px 24px;
+  margin: 0 auto;
+  padding: 0 24px;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .logo-container {
@@ -143,9 +159,8 @@ body {
 }
 
 .logo-tag-container {
-  position: absolute;
-  top: -16px;
-  left: 24px;
+  position: relative;
+  top: 0;
   z-index: 20;
 }
 
@@ -171,9 +186,8 @@ body {
 }
 
 .contact-text {
-  position: absolute;
-  top: 8px;
-  right: 24px;
+  position: relative;
+  top: 16px;
   color: #000000;
   font-size: clamp(11px, 2.7vw, 13px);
   font-weight: 500;
@@ -283,14 +297,13 @@ body {
 
 .subheader {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(14px, 2.5vw, 20px);
+  font-size: 16px !important;
   line-height: 1.4;
   text-align: center;
   margin: 0 0 32px 0;
   color: #6b7280;
   font-weight: 400;
   width: 100%;
-  white-space: nowrap;
 }
 
 
@@ -298,6 +311,10 @@ body {
 .headline-primary {
   color: rgba(0, 0, 0, 0.85);
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-break {
+  display: none;
 }
 
 .headline-secondary {
@@ -587,7 +604,8 @@ body {
 
 /* Footer */
 .footer {
-  margin-top: 0;
+  margin-top: auto;
+  height: 3rem;
 }
 
 .footer-container {
@@ -598,7 +616,8 @@ body {
 }
 
 .footer-content {
-  padding: 32px;
+  height: 100%;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -675,13 +694,13 @@ body {
   }
   
   .header-container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
   }
   
   .logo-tag-container {
+    position: absolute;
+    top: 0;
     left: 16px;
-    top: -16px;
   }
   
   .contact-button {
@@ -702,27 +721,32 @@ body {
   }
   
   .logo-tag {
-    width: 65px;
-    height: 34px;
+    width: 82px;
+    height: 43px;
   }
   
   .contact-text {
+    position: absolute;
+    top: 16px;
     right: 16px;
-    top: 4px;
-    font-size: clamp(10px, 2.5vw, 12px);
+    font-size: clamp(11px, 2.7vw, 13px);
   }
   
   .headline {
-    font-size: clamp(28px, 8vw, 44px);
+    font-size: clamp(44px, 12vw, 60px);
     line-height: 1.1;
     letter-spacing: -0.06em;
   }
   
   .subheader {
-    font-size: clamp(12px, 2.8vw, 18px);
-    white-space: nowrap;
-    line-height: 1.3;
-    margin: 0 0 24px 0;
+    font-size: 16px !important;
+    line-height: 1.4;
+    max-width: 90vw;
+    text-align: center;
+  }
+  
+  .mobile-break {
+    display: inline;
   }
 
   
@@ -734,24 +758,18 @@ body {
   }
   
   .email-form {
-    max-width: 100%;
-    width: 100%;
-    padding: 0 8px;
-  }
-  
-  .input-group {
+    max-width: 400px;
     width: 100%;
   }
   
   .input-wrapper {
-    height: 46px;
-    padding-right: 150px;
+    height: 44px;
+    padding-right: 132px;
   }
   
   .submit-button {
     width: 130px;
     height: 48px;
-    right: -1px;
   }
   
   .submit-button span {
@@ -770,10 +788,11 @@ body {
   }
   
   .footer-content {
-    flex-direction: column-reverse;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 16px;
-    padding: 24px;
+    padding: 0;
   }
   
   .footer-container {
@@ -781,7 +800,7 @@ body {
   }
   
   .copyright {
-    font-size: clamp(10px, 2.5vw, 12px);
+    font-size: clamp(11px, 2.7vw, 13px);
     white-space: nowrap;
   }
 }
@@ -803,14 +822,15 @@ body {
 /* Very narrow screens where footer text needs to wrap */
 @media (max-width: 480px) {
   .footer-content {
-    flex-direction: column-reverse;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 12px;
-    padding: 20px;
+    padding: 0;
   }
   
   .copyright {
-    font-size: 10px;
+    font-size: clamp(11px, 2.7vw, 13px);
     white-space: normal;
     line-height: 1.2;
   }
@@ -821,36 +841,34 @@ body {
   
   /* Form optimizations for very small screens */
   .email-form {
-    max-width: 100%;
-    padding: 0 4px;
+    max-width: 380px;
+    padding: 0 8px;
   }
   
-  .input-group {
-    width: 100%;
+  .contact-button {
+    font-size: 13px;
   }
   
   .input-wrapper {
-    height: 44px;
-    padding-right: 140px;
+    height: 42px;
+    padding-right: 122px;
   }
   
   .submit-button {
     width: 120px;
     height: 46px;
-    right: -1px;
   }
   
   .submit-button span {
-    font-size: 14px;
+    font-size: 16px;
   }
   
   .email-input {
     font-size: 16px;
   }
   
-  .subheader {
-    font-size: clamp(11px, 2.5vw, 16px);
-    line-height: 1.2;
+  .footer-container {
+    padding: 0 16px;
   }
 }
 
