@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -93,7 +94,7 @@ export default function Home() {
         <div className="header-container">
           {/* Logo Tag */}
           <div className="logo-tag-container">
-            <a href="/" className="logo-link">
+            <Link href="/" className="logo-link">
               <svg
                 width="82"
                 height="43"
@@ -113,7 +114,7 @@ export default function Home() {
               <path d="M318.4 131.91C318.93 129.61 320.04 127.73 321.75 126.29C323.45 124.85 325.65 124.13 328.34 124.13H330.36V132.84H327.48C324.31 132.84 321.95 133.31 320.39 134.24C318.83 135.18 318.05 136.65 318.05 138.67V161.71H308.83V124.12H318.05V131.9H318.41L318.4 131.91Z" fill="white"/>
               <path d="M346.7 140.55L351.67 133.78L360.09 124.13H370.53L357.57 138.68L371.9 161.72H360.95L351.3 144.87L346.33 150.27V161.72H337.11V108.44H346.33V140.55H346.7Z" fill="white"/>
             </svg>
-            </a>
+            </Link>
           </div>
           
           {/* Navigation */}
