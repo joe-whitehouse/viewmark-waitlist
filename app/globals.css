@@ -61,7 +61,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--background);
+  background: #f8f9fa;
   color: var(--foreground);
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
@@ -69,15 +69,47 @@ body {
   letter-spacing: -0.02em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
+  min-height: 100vh;
+  /* Safari-specific fixes */
+  -webkit-overflow-scrolling: touch;
+  background-attachment: scroll;
 }
 
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  height: 100vh;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background: #f8f9fa;
+  /* Safari-specific fixes */
+  -webkit-overflow-scrolling: touch;
+  background-attachment: scroll;
+}
+
+/* Safari-specific fixes for black bars */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* iOS Safari specific */
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Fix for Safari address bar black background */
+  @media screen and (max-width: 768px) {
+    body {
+      background-color: #f8f9fa;
+      background-image: 
+        radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.25) 0%, transparent 25%),
+        radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 25%),
+        radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.25) 0%, transparent 25%),
+        radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%);
+      background-attachment: scroll;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 /* Utility classes */
@@ -96,11 +128,41 @@ html {
               radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.25) 0%, transparent 25%),
               radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%),
               #f8f9fa;
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
           }
+
+/* Ensure background extends beyond content when scrolling */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.25) 0%, transparent 25%),
+    radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 25%),
+    radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.25) 0%, transparent 25%),
+    radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%),
+    #f8f9fa;
+  z-index: -1;
+  pointer-events: none;
+}
 
 .min-h-dvh {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(255, 0, 128, 0.25) 0%, transparent 25%),
+    radial-gradient(circle at 100% 0%, rgba(124, 58, 237, 0.25) 0%, transparent 25%),
+    radial-gradient(circle at 0% 100%, rgba(245, 158, 11, 0.25) 0%, transparent 25%),
+    radial-gradient(circle at 100% 100%, rgba(16, 185, 129, 0.25) 0%, transparent 25%),
+    #f8f9fa;
 }
 
 /* Top Banner */

@@ -32,6 +32,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+
         <link
           rel="preload"
           href="/ABCOracle-Book.woff2"
@@ -53,6 +54,13 @@ export default function RootLayout({
           type="font/woff"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href="/ABCOracle-Light.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <style dangerouslySetInnerHTML={{
           __html: `
             @font-face {
@@ -60,7 +68,31 @@ export default function RootLayout({
               src: url('/Viewmark-SemiBold.woff') format('woff');
               font-weight: 600;
               font-style: normal;
-              font-display: block;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'ABCOracle-Book';
+              src: url('/ABCOracle-Book.woff2') format('woff2');
+              font-weight: 400;
+              font-style: normal;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'ABCOracle-Light';
+              src: url('/ABCOracle-Light.woff2') format('woff2');
+              font-weight: 300;
+              font-style: normal;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'ABCFavoritMono';
+              src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
+              font-weight: 400;
+              font-style: normal;
+              font-display: swap;
             }
           `
         }} />
