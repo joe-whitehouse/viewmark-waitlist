@@ -26,12 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+
+
 
         <link
           rel="preload"
@@ -57,6 +53,34 @@ export default function RootLayout({
         <link
           rel="preload"
           href="/ABCOracle-Light.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/Inter_18pt-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/Inter_18pt-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/Inter_18pt-SemiBold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/Inter_18pt-Bold.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
@@ -91,6 +115,39 @@ export default function RootLayout({
               font-family: 'ABCFavoritMono';
               src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
               font-weight: 400;
+              font-style: normal;
+              font-display: swap;
+            }
+            
+            /* Inter font declarations - local files for reliable loading */
+            @font-face {
+              font-family: 'Inter';
+              src: url('/Inter_18pt-Regular.woff2') format('woff2');
+              font-weight: 400;
+              font-style: normal;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'Inter';
+              src: url('/Inter_18pt-Medium.woff2') format('woff2');
+              font-weight: 500;
+              font-style: normal;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'Inter';
+              src: url('/Inter_18pt-SemiBold.woff2') format('woff2');
+              font-weight: 600;
+              font-style: normal;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'Inter';
+              src: url('/Inter_18pt-Bold.woff2') format('woff2');
+              font-weight: 700;
               font-style: normal;
               font-display: swap;
             }
