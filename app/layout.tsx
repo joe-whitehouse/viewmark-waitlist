@@ -53,7 +53,6 @@ export default function RootLayout({
           type="font/woff"
           crossOrigin="anonymous"
         />
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <style dangerouslySetInnerHTML={{
           __html: `
             @font-face {

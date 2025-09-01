@@ -272,25 +272,26 @@ body {
 /* Headline */
 .headline {
   text-align: center;
-  font-size: clamp(48px, 7vw, 84px);
+  font-size: clamp(32px, 8vw, 84px);
   font-weight: 600;
-  line-height: 1.05;
-  margin: 0 0 32px 0;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
   font-family: 'Viewmark-SemiBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   width: 100%;
 }
 
 .subheader {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(16px, 3vw, 20px);
-  line-height: 1.4;
+  font-size: clamp(14px, 4vw, 20px);
+  line-height: 1.5;
   text-align: center;
-  margin: 0 0 32px 0;
+  margin: 0 0 28px 0;
   color: #6b7280;
   font-weight: 400;
   width: 100%;
-  white-space: nowrap;
+  max-width: 600px;
+  padding: 0 16px;
 }
 
 
@@ -713,13 +714,18 @@ body {
   }
   
   .headline {
-    font-size: clamp(28px, 8vw, 44px);
-    line-height: 1.1;
-    letter-spacing: -0.06em;
+    font-size: clamp(24px, 9vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
   }
 
-  
-
+  .subheader {
+    font-size: clamp(12px, 4.5vw, 16px);
+    margin-bottom: 24px;
+    padding: 0 8px;
+    line-height: 1.5;
+  }
   
   .banner-text {
     font-size: clamp(11px, 2.8vw, 13px);
@@ -727,32 +733,29 @@ body {
   }
   
   .email-form {
-    max-width: 480px;
+    max-width: 100%;
     width: 100%;
+    padding: 0 8px;
   }
   
   .input-wrapper {
-    height: 48px;
-    padding-right: 160px;
+    height: 50px;
+    padding-right: 150px;
   }
   
   .submit-button {
     width: 140px;
-    height: 48px;
+    height: 50px;
   }
   
   .submit-button span {
     white-space: nowrap;
     overflow: visible;
     text-overflow: clip;
-    font-size: 16px;
+    font-size: 15px;
   }
   
   .email-input {
-    font-size: 16px;
-  }
-  
-  .submit-button {
     font-size: 16px;
   }
   
@@ -807,27 +810,38 @@ body {
   }
   
   /* Form optimizations for very small screens */
-  .email-form {
-    max-width: 480px;
-    padding: 0 8px;
+  .headline {
+    font-size: clamp(20px, 10vw, 32px);
+    margin-bottom: 16px;
   }
   
-  .contact-button {
-    font-size: 13px;
+  .subheader {
+    font-size: clamp(11px, 5vw, 14px);
+    margin-bottom: 20px;
+    padding: 0 4px;
+  }
+  
+  .email-form {
+    max-width: 100%;
+    padding: 0 4px;
+  }
+  
+  .contact-text {
+    font-size: clamp(9px, 2.2vw, 11px);
   }
   
   .input-wrapper {
     height: 48px;
-    padding-right: 160px;
+    padding-right: 140px;
   }
   
   .submit-button {
-    width: 140px;
+    width: 130px;
     height: 48px;
   }
   
   .submit-button span {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .email-input {
