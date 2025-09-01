@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Viewmark - Guerrilla marketing for short form",
+  title: "Viewmark - Get your brand seen by millions",
   description: "Put your brand on viral short-form videos with top creators. Get seen, sell more, and scale faster.",
   icons: {
     icon: [
