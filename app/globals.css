@@ -357,7 +357,7 @@ body::before {
 
 .contact-text {
   position: relative;
-  top: 16px;
+  top: 26px;
   color: #6b7280 !important;
   font-size: clamp(11px, 2.7vw, 13px);
   font-weight: 500;
@@ -999,7 +999,7 @@ a.contact-text:focus,
   
   .contact-text {
     position: absolute;
-    top: 16px;
+    top: 26px;
     right: 16px;
     font-size: clamp(11px, 2.7vw, 13px);
     color: #6b7280 !important;
