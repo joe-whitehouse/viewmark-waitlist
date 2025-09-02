@@ -44,7 +44,7 @@ export default function Home() {
     const minLoadingTime = 2000;
     
     try {
-      const response = await fetch('/api/submit-email/', {
+      const response = await fetch('/.netlify/functions/submit-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
