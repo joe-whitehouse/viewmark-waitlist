@@ -308,6 +308,10 @@ body::before {
   padding: 0;
   margin: 0;
   height: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
@@ -969,6 +973,18 @@ a.contact-text:focus,
     padding: 0 16px;
   }
   
+  /* Mobile sticky header optimization */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
   .logo-tag-container {
     position: absolute;
     top: 0;
@@ -1136,6 +1152,14 @@ a.contact-text:focus,
     .main-content {
       min-height: calc(100dvh - 6rem - 1rem); /* Slightly less padding for iOS */
       padding: 0.5rem 0;
+    }
+    
+    /* iOS Safari sticky header optimization */
+    .header {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
   }
 }
