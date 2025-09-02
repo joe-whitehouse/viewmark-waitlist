@@ -9,11 +9,7 @@ export const metadata: Metadata = {
       {
         url: '/favicon.svg',
         type: 'image/svg+xml',
-      },
-          {
-      url: '/vm-favicon.ico',
-      sizes: 'any',
-    }
+      }
     ],
   },
 };
