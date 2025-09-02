@@ -896,12 +896,27 @@ a.contact-text:focus,
 }
 
 .social-link {
-  color: #000000;
+  color: #000000 !important;
   transition: opacity 0.2s ease;
 }
 
 .social-link:hover {
   opacity: 0.8;
+}
+
+.social-link svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* Override global link inheritance for social links */
+.social-link,
+.social-link:link,
+.social-link:visited,
+.social-link:hover,
+.social-link:active,
+.social-link:focus {
+  color: #000000 !important;
 }
 
 /* Animations */
@@ -1138,6 +1153,25 @@ a.contact-text:focus,
   
   .social-links {
     gap: 12px;
+  }
+  
+  .social-link {
+    color: #000000 !important;
+  }
+  
+  .social-link svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+  }
+  
+  /* Override global link inheritance for social links on mobile */
+  .social-link,
+  .social-link:link,
+  .social-link:visited,
+  .social-link:hover,
+  .social-link:active,
+  .social-link:focus {
+    color: #000000 !important;
   }
   
   /* Form optimizations for very small screens */
