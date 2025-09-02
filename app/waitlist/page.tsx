@@ -154,7 +154,7 @@ export default function Home() {
               <div className={`input-group ${emailError ? 'error' : ''}`}>
                 <div className="input-wrapper">
                   <input
-                    type="text"
+                    type="email"
                     value={email}
                     onChange={(e) => {
                       setEmail(e.target.value);
@@ -166,6 +166,11 @@ export default function Home() {
                     placeholder="name@work-email.com"
                     aria-label="Work email address"
                     className={`email-input ${isResetting ? 'input-fade-out' : ''}`}
+                    autoComplete="email"
+                    autoCapitalize="none"
+                    autoCorrect="off"
+                    spellCheck="false"
+                    inputMode="email"
                   />
                 </div>
                 <button

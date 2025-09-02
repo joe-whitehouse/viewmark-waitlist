@@ -660,6 +660,11 @@ a.contact-text:focus,
   color: var(--primary-text);
   text-align: left;
   font-family: 'IBMPlexMono', monospace;
+  /* Mobile input optimizations */
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: text;
+  -webkit-text-size-adjust: 100%;
 }
 
 .email-input::placeholder {

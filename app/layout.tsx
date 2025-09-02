@@ -2,8 +2,27 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "viewmark",
-  description: "Join the waitlist",
+  title: "Viewmark – Put your logo on viral content",
+  description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care. Join the waitlist for Viewmark.",
+  keywords: "viral marketing, brand visibility, logo placement, content marketing, waitlist",
+  authors: [{ name: "Viewmark" }],
+  creator: "Viewmark",
+  publisher: "Viewmark",
+  robots: "index, follow",
+  openGraph: {
+    title: "Viewmark – Put your logo on viral content",
+    description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care.",
+    type: "website",
+    url: "https://viewmark.co",
+    siteName: "Viewmark",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Viewmark – Put your logo on viral content",
+    description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care.",
+    creator: "@viewmarkco",
+  },
   icons: {
     icon: [
       {
