@@ -44,39 +44,12 @@ export default function RootLayout({
 
 
 
-        <link
-          rel="preload"
-          href="/ABCOracle-Book.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/ABCFavoritMono-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/IBMPlexMono-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* Only preload the most critical fonts to prevent FOUT */}
         <link
           rel="preload"
           href="/Viewmark-SemiBold.woff"
           as="font"
           type="font/woff"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/ABCOracle-Light.woff2"
-          as="font"
-          type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
@@ -88,74 +61,28 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="/Inter_18pt-Medium.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/Inter_18pt-SemiBold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/Inter_18pt-Bold.woff2"
+          href="/IBMPlexMono-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <style dangerouslySetInnerHTML={{
           __html: `
+            /* Only include fonts that are actually used in the design */
             @font-face {
               font-family: 'Viewmark-SemiBold';
               src: url('/Viewmark-SemiBold.woff') format('woff');
               font-weight: 600;
               font-style: normal;
-              font-display: fallback;
+              font-display: swap;
             }
             
-            @font-face {
-              font-family: 'ABCOracle-Book';
-              src: url('/ABCOracle-Book.woff2') format('woff2');
-              font-weight: 400;
-              font-style: normal;
-              font-display: fallback;
-            }
-            
-            @font-face {
-              font-family: 'ABCOracle-Light';
-              src: url('/ABCOracle-Light.woff2') format('woff2');
-              font-weight: 300;
-              font-style: normal;
-              font-display: fallback;
-            }
-            
-            @font-face {
-              font-family: 'ABCFavoritMono';
-              src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
-              font-weight: 400;
-              font-style: normal;
-              font-display: fallback;
-            }
-            
-            @font-face {
-              font-family: 'IBMPlexMono';
-              src: url('/IBMPlexMono-Regular.woff2') format('woff2');
-              font-weight: 400;
-              font-style: normal;
-              font-display: fallback;
-            }
-            
-            /* Inter font declarations - local files for reliable loading */
             @font-face {
               font-family: 'Inter';
               src: url('/Inter_18pt-Regular.woff2') format('woff2');
               font-weight: 400;
               font-style: normal;
-              font-display: fallback;
+              font-display: swap;
             }
             
             @font-face {
@@ -163,7 +90,7 @@ export default function RootLayout({
               src: url('/Inter_18pt-Medium.woff2') format('woff2');
               font-weight: 500;
               font-style: normal;
-              font-display: fallback;
+              font-display: swap;
             }
             
             @font-face {
@@ -171,7 +98,7 @@ export default function RootLayout({
               src: url('/Inter_18pt-SemiBold.woff2') format('woff2');
               font-weight: 600;
               font-style: normal;
-              font-display: fallback;
+              font-display: swap;
             }
             
             @font-face {
@@ -179,7 +106,15 @@ export default function RootLayout({
               src: url('/Inter_18pt-Bold.woff2') format('woff2');
               font-weight: 700;
               font-style: normal;
-              font-display: fallback;
+              font-display: swap;
+            }
+            
+            @font-face {
+              font-family: 'IBMPlexMono';
+              src: url('/IBMPlexMono-Regular.woff2') format('woff2');
+              font-weight: 400;
+              font-style: normal;
+              font-display: swap;
             }
           `
         }} />
