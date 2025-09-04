@@ -1,4 +1,4 @@
-/* Using local Inter fonts for better performance */
+/* Using local ABC fonts for better performance */
 
 @tailwind base;
 @tailwind components;
@@ -76,7 +76,7 @@ body {
   padding: 0;
   background: #f8f9fa;
   color: var(--foreground);
-  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  font-family: 'ABCOracle-Book', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.02em;
@@ -248,7 +248,7 @@ body::before {
   color: var(--primary-text);
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter', sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
 }
 
 /* Header */
@@ -314,7 +314,7 @@ body::before {
   color: #6b7280 !important;
   font-size: clamp(11px, 2.7vw, 13px);
   font-weight: 500;
-  font-family: 'ABCFavoritMono', 'Inter', sans-serif;
+  font-family: 'ABCFavoritMono', 'ABCOracle-Book', sans-serif;
   letter-spacing: 0.1em;
   text-decoration: none !important;
   transition: color 0.4s ease;
@@ -499,7 +499,7 @@ a.contact-text:focus,
 }
 
 .subheader {
-  font-family: 'ABCOracle-Book', 'Inter', sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
   font-size: 18px !important;
   line-height: 1.4;
   text-align: center;
@@ -704,7 +704,7 @@ a.contact-text:focus,
   -webkit-font-smoothing: antialiased;
   user-select: none;
   cursor: pointer;
-  font-family: 'ABCOracle-Book', 'Inter', sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
 }
 
 .submit-button span {
@@ -779,7 +779,7 @@ a.contact-text:focus,
   color: rgba(220, 38, 38, 0.9);
   min-height: 20px;
   transition: opacity 0.4s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
 }
 
 .error-visible {
@@ -819,7 +819,7 @@ a.contact-text:focus,
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter', sans-serif;
+  font-family: 'ABCOracle-Book', sans-serif;
 }
 
 .success-content svg {
@@ -851,7 +851,7 @@ a.contact-text:focus,
 .copyright {
   font-size: clamp(11px, 2.7vw, 13px);
   line-height: calc(1em + 4px);
-  font-family: 'ABCFavoritMono', 'Inter', sans-serif;
+  font-family: 'ABCFavoritMono', 'ABCOracle-Book', sans-serif;
   letter-spacing: 0.1em;
   color: #6b7280;
   white-space: nowrap;
