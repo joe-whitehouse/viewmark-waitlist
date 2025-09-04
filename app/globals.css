@@ -627,7 +627,7 @@ a.contact-text:focus,
   line-height: calc(1em + 4px);
   color: var(--primary-text);
   text-align: left;
-  font-family: 'ABCFavoritMono', 'IBMPlexMono', monospace;
+  font-family: 'ABCFavoritMono', monospace;
   /* Mobile input optimizations */
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
@@ -637,7 +637,7 @@ a.contact-text:focus,
 
 .email-input::placeholder {
   color: rgba(0, 0, 0, 0.4);
-  font-family: 'ABCFavoritMono', 'IBMPlexMono', monospace;
+  font-family: 'ABCFavoritMono', monospace;
 }
 
 .input-error .email-input {
@@ -646,7 +646,7 @@ a.contact-text:focus,
 
 .input-error .email-input::placeholder {
   color: rgba(0, 0, 0, 0.4);
-  font-family: 'ABCFavoritMono', 'IBMPlexMono', monospace;
+  font-family: 'ABCFavoritMono', monospace;
 }
 
 /* URL Input */
