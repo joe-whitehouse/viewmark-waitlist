@@ -139,7 +139,7 @@ export default function HomePage() {
               className="contact-text"
               aria-label="Contact us via email"
             >
-              Contact
+              CONTACT
             </a>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function HomePage() {
           <div className="footer-content">
             {/* Copyright */}
             <div className="copyright">
-              © 2025 Viewmark. All rights reserved.
+              © 2025 VIEWMARK. ALL RIGHTS RESERVED.
             </div>
             
             {/* Social media icons */}

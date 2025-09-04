@@ -44,74 +44,50 @@ export default function RootLayout({
 
 
 
-        {/* Only preload the most critical fonts to prevent FOUT */}
+        {/* Preload critical fonts to prevent FOUT */}
         <link
           rel="preload"
-          href="/Viewmark-SemiBold.woff"
-          as="font"
-          type="font/woff"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/Inter_18pt-Regular.woff2"
+          href="/ABCOracle-Light.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/IBMPlexMono-Regular.woff2"
+          href="/ABCOracle-Book.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/ABCFavoritMono-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <style dangerouslySetInnerHTML={{
           __html: `
-            /* Only include fonts that are actually used in the design */
+            /* Optimized font declarations for FOUT prevention */
             @font-face {
-              font-family: 'Viewmark-SemiBold';
-              src: url('/Viewmark-SemiBold.woff') format('woff');
-              font-weight: 600;
+              font-family: 'ABCOracle-Light';
+              src: url('/ABCOracle-Light.woff2') format('woff2');
+              font-weight: 300;
               font-style: normal;
               font-display: swap;
             }
             
             @font-face {
-              font-family: 'Inter';
-              src: url('/Inter_18pt-Regular.woff2') format('woff2');
+              font-family: 'ABCOracle-Book';
+              src: url('/ABCOracle-Book.woff2') format('woff2');
               font-weight: 400;
               font-style: normal;
               font-display: swap;
             }
             
             @font-face {
-              font-family: 'Inter';
-              src: url('/Inter_18pt-Medium.woff2') format('woff2');
-              font-weight: 500;
-              font-style: normal;
-              font-display: swap;
-            }
-            
-            @font-face {
-              font-family: 'Inter';
-              src: url('/Inter_18pt-SemiBold.woff2') format('woff2');
-              font-weight: 600;
-              font-style: normal;
-              font-display: swap;
-            }
-            
-            @font-face {
-              font-family: 'Inter';
-              src: url('/Inter_18pt-Bold.woff2') format('woff2');
-              font-weight: 700;
-              font-style: normal;
-              font-display: swap;
-            }
-            
-            @font-face {
-              font-family: 'IBMPlexMono';
-              src: url('/IBMPlexMono-Regular.woff2') format('woff2');
+              font-family: 'ABCFavoritMono';
+              src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
               font-weight: 400;
               font-style: normal;
               font-display: swap;
