@@ -66,31 +66,19 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        <style dangerouslySetInnerHTML={{
+        <script dangerouslySetInnerHTML={{
           __html: `
-            /* Optimized font declarations for FOUT prevention */
-            @font-face {
-              font-family: 'ABCOracle-Light';
-              src: url('/ABCOracle-Light.woff2') format('woff2');
-              font-weight: 300;
-              font-style: normal;
-              font-display: swap;
-            }
-            
-            @font-face {
-              font-family: 'ABCOracle-Book';
-              src: url('/ABCOracle-Book.woff2') format('woff2');
-              font-weight: 400;
-              font-style: normal;
-              font-display: swap;
-            }
-            
-            @font-face {
-              font-family: 'ABCFavoritMono';
-              src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
-              font-weight: 400;
-              font-style: normal;
-              font-display: swap;
+            // Font loading detection and fallback
+            if ('fonts' in document) {
+              Promise.all([
+                document.fonts.load('300 16px ABCOracle-Light'),
+                document.fonts.load('400 16px ABCOracle-Book'),
+                document.fonts.load('400 16px ABCFavoritMono')
+              ]).then(() => {
+                document.documentElement.classList.add('fonts-loaded');
+              }).catch(() => {
+                document.documentElement.classList.add('fonts-failed');
+              });
             }
           `
         }} />
