@@ -77,8 +77,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Viewmark" />
-        <meta name="theme-color" content="#1A1A1A" />
-        <meta name="msapplication-TileColor" content="#1A1A1A" />
+        <meta name="theme-color" content="#FFFFFF" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
       </head>
       <body>
         <FontLoader />
