@@ -1498,6 +1498,31 @@ a.contact-text:focus,
     rgba(0, 0, 0, 0.15) 0px 2px 4px 0px;
 }
 
+/* 404 Page Button Override */
+.not-found-button {
+  color: white !important;
+}
+
+.not-found-button:hover {
+  color: white !important;
+}
+
+.not-found-button:focus {
+  color: white !important;
+}
+
+.not-found-button:active {
+  color: white !important;
+}
+
+.not-found-button:visited {
+  color: white !important;
+}
+
+.not-found-button:link {
+  color: white !important;
+}
+
 /* Remove outlines from chart elements */
 .recharts-wrapper *,
 .recharts-wrapper svg *,

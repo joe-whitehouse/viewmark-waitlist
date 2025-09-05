@@ -23,7 +23,7 @@ export default function NotFound() {
         <div>
           <Link 
             href="/"
-            className="inline-block bg-black text-white px-8 py-4 text-lg font-normal transition-all duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            className="not-found-button inline-block bg-black text-white px-8 py-4 text-lg font-normal transition-all duration-200 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
             style={{ fontFamily: 'ABCOracle-Book, sans-serif', borderRadius: '1rem' }}
           >
             Back to Home
