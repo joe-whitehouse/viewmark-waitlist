@@ -50,31 +50,24 @@ a:link {
 
 /* Font declarations with mobile optimization */
 @font-face {
-  font-family: 'ABCOracle-Light';
-  src: url('/ABCOracle-Light.woff2') format('woff2');
-  font-weight: 300;
+  font-family: 'neueSingular-D-Medium';
+  src: url('/fonts/neueSingular-D-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
-  font-family: 'ABCOracle-Book';
-  src: url('/ABCOracle-Book.woff2') format('woff2');
+  font-family: 'Inter_18pt-Regular';
+  src: url('/fonts/Inter_18pt-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-  font-family: 'ABCFavoritMono';
-  src: url('/ABCFavoritMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+
 
 :root {
   --background: #ffffff;
@@ -102,7 +95,7 @@ body {
   padding: 0;
   background: #f8f9fa;
   color: var(--foreground);
-  font-family: 'ABCOracle-Book', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  font-family: 'Inter_18pt-Regular', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.02em;
@@ -274,7 +267,7 @@ body::before {
   color: var(--primary-text);
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: 'Inter_18pt-Regular', sans-serif;
 }
 
 /* Header */
@@ -309,8 +302,10 @@ body::before {
 
 .logo-tag-container {
   position: relative;
-  top: 0;
+  top: 20px;
   z-index: 20;
+  display: flex;
+  align-items: flex-start;
 }
 
 .logo-tag {
@@ -336,12 +331,12 @@ body::before {
 
 .contact-text {
   position: relative;
-  top: 26px;
+  top: 20px; /* Adjusted position */
   color: #6b7280 !important;
-  font-size: clamp(11px, 2.7vw, 13px);
-  font-weight: 500;
-  font-family: 'ABCFavoritMono', 'ABCOracle-Book', sans-serif;
-  letter-spacing: 0.1em;
+  font-size: clamp(13px, 3.2vw, 15px);
+  font-family: 'Inter_18pt-Regular', sans-serif;
+  letter-spacing: -0.01em;
+  line-height: calc(1em + 4px);
   text-decoration: none !important;
   transition: color 0.4s ease;
   z-index: 20;
@@ -496,6 +491,23 @@ a.contact-text:focus,
   min-height: 0;
 }
 
+/* Sticker Logo Container */
+.sticker-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.sticker-logo-container svg {
+  max-width: 200px;
+  height: auto;
+  width: 100%;
+  transform: rotate(-3deg);
+  transition: transform 0.3s ease;
+}
+
 .content-container {
   width: 100%;
   max-width: 1280px;
@@ -516,8 +528,8 @@ a.contact-text:focus,
 .headline {
   text-align: center;
   font-size: clamp(48px, 7vw, 84px);
-  font-weight: 300;
-  font-family: 'ABCOracle-Light', 'Viewmark-SemiBold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  font-family: 'neueSingular-D-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.05;
   margin: 0 0 32px 0;
   letter-spacing: -0.04em;
@@ -525,7 +537,7 @@ a.contact-text:focus,
 }
 
 .subheader {
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: 'Inter_18pt-Regular', sans-serif;
   font-size: 18px !important;
   line-height: 1.4;
   text-align: center;
@@ -573,7 +585,7 @@ a.contact-text:focus,
   line-height: 1.3;
   color: rgba(0, 0, 0, 0.6);
   margin-bottom: 28px;
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: 'Inter_18pt-Regular', sans-serif;
 }
 
 
@@ -590,7 +602,7 @@ a.contact-text:focus,
 
 .email-form {
   width: 100%;
-  max-width: 480px;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -653,7 +665,7 @@ a.contact-text:focus,
   line-height: calc(1em + 4px);
   color: var(--primary-text);
   text-align: left;
-  font-family: 'ABCFavoritMono', monospace;
+  font-family: 'Inter_18pt-Regular', monospace;
   /* Mobile input optimizations */
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
@@ -663,7 +675,7 @@ a.contact-text:focus,
 
 .email-input::placeholder {
   color: rgba(0, 0, 0, 0.4);
-  font-family: 'ABCFavoritMono', monospace;
+  font-family: 'Inter_18pt-Regular', monospace;
 }
 
 .input-error .email-input {
@@ -672,7 +684,7 @@ a.contact-text:focus,
 
 .input-error .email-input::placeholder {
   color: rgba(0, 0, 0, 0.4);
-  font-family: 'ABCFavoritMono', monospace;
+  font-family: 'Inter_18pt-Regular', monospace;
 }
 
 /* URL Input */
@@ -730,7 +742,7 @@ a.contact-text:focus,
   -webkit-font-smoothing: antialiased;
   user-select: none;
   cursor: pointer;
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: 'Inter_18pt-Regular', sans-serif;
 }
 
 .submit-button span {
@@ -805,7 +817,7 @@ a.contact-text:focus,
   color: rgba(220, 38, 38, 0.9);
   min-height: 20px;
   transition: opacity 0.4s ease;
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: 'Inter_18pt-Regular', sans-serif;
 }
 
 .error-visible {
@@ -845,7 +857,7 @@ a.contact-text:focus,
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'ABCOracle-Book', sans-serif;
+  font-family: 'Inter_18pt-Regular', sans-serif;
 }
 
 .success-content svg {
@@ -875,10 +887,10 @@ a.contact-text:focus,
 }
 
 .copyright {
-  font-size: clamp(11px, 2.7vw, 13px);
+  font-size: clamp(13px, 3.2vw, 15px);
   line-height: calc(1em + 4px);
-  font-family: 'ABCFavoritMono', 'ABCOracle-Book', sans-serif;
-  letter-spacing: 0.1em;
+  font-family: 'Inter_18pt-Regular', sans-serif;
+  letter-spacing: -0.01em;
   color: #6b7280;
   white-space: nowrap;
 }
@@ -951,42 +963,48 @@ a.contact-text:focus,
 
 /* Font loading states */
 .fonts-loaded .headline {
-  font-family: 'ABCOracle-Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'neueSingular-D-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .subheader,
 .fonts-loaded .submit-button,
 .fonts-loaded .error-message,
 .fonts-loaded .success-content {
-  font-family: 'ABCOracle-Book', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .email-input,
 .fonts-loaded .email-input::placeholder,
-.fonts-loaded .copyright,
+.fonts-loaded .copyright {
+  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 .fonts-loaded .contact-text {
-  font-family: 'ABCFavoritMono', 'Courier New', monospace;
+  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Mobile font loading optimization */
 @media (max-width: 768px) {
   /* Ensure proper font loading on mobile */
   .headline {
-    font-family: 'ABCOracle-Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'neueSingular-D-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .subheader,
   .submit-button,
   .error-message,
   .success-content {
-    font-family: 'ABCOracle-Book', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .email-input,
   .email-input::placeholder,
-  .copyright,
+  .copyright {
+    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
+  
   .contact-text {
-    font-family: 'ABCFavoritMono', 'Courier New', monospace !important;
+    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
 }
 
@@ -1001,13 +1019,15 @@ a.contact-text:focus,
   }
   
   .header-container {
-    padding: 0 16px;
+    padding: 0 24px;
   }
   
   .logo-tag-container {
     position: absolute;
-    top: 0;
-    left: 16px;
+    top: 20px;
+    left: 24px;
+    display: flex;
+    align-items: flex-start;
   }
   
   .contact-button {
@@ -1028,15 +1048,15 @@ a.contact-text:focus,
   }
   
   .logo-tag {
-    width: 82px;
-    height: 52px;
+    width: 80px;
+    height: 13px;
   }
   
   .contact-text {
     position: absolute;
-    top: 26px;
-    right: 16px;
-    font-size: clamp(11px, 2.7vw, 13px);
+    top: 20px;
+    right: 24px;
+    font-size: clamp(13px, 3.2vw, 15px);
     color: #6b7280 !important;
     outline: none;
     -webkit-tap-highlight-color: transparent;
@@ -1126,15 +1146,15 @@ a.contact-text:focus,
     white-space: nowrap;
     overflow: visible;
     text-overflow: clip;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .email-input {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .submit-button {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .footer-content {
@@ -1146,11 +1166,11 @@ a.contact-text:focus,
   }
   
   .footer-container {
-    padding: 0 16px;
+    padding: 0 24px;
   }
   
   .copyright {
-    font-size: clamp(11px, 2.7vw, 13px);
+    font-size: clamp(13px, 3.2vw, 15px);
     white-space: nowrap;
   }
   
@@ -1164,6 +1184,14 @@ a.contact-text:focus,
     padding: 0 16px;
     justify-content: center;
     gap: 0;
+  }
+  
+  .sticker-logo-container {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sticker-logo-container svg {
+    max-width: 160px;
   }
   
   /* iOS Safari specific height optimization */
@@ -1181,7 +1209,7 @@ a.contact-text:focus,
   }
   
   .footer-container {
-    padding: 0 32px;
+    padding: 0 24px;
   }
   
   .headline {
@@ -1204,7 +1232,7 @@ a.contact-text:focus,
   }
   
   .copyright {
-    font-size: clamp(11px, 2.7vw, 13px);
+    font-size: clamp(13px, 3.2vw, 15px);
     white-space: normal;
   }
   
@@ -1268,15 +1296,15 @@ a.contact-text:focus,
   }
   
   .submit-button span {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .email-input {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .footer-container {
-    padding: 0 16px;
+    padding: 0 24px;
   }
 }
 

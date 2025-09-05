@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import FontLoader from "./components/FontLoader";
 
 export const metadata: Metadata = {
   title: "Viewmark – Put your logo on viral content",
@@ -28,6 +29,10 @@ export const metadata: Metadata = {
       {
         url: '/favicon.svg',
         type: 'image/svg+xml',
+      },
+      {
+        url: '/favicon.ico',
+        type: 'image/x-icon',
       }
     ],
   },
@@ -47,43 +52,23 @@ export default function RootLayout({
         {/* Preload critical fonts to prevent FOUT */}
         <link
           rel="preload"
-          href="/ABCOracle-Light.woff2"
+          href="/fonts/neueSingular-D-Medium.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/ABCOracle-Book.woff2"
+          href="/fonts/Inter_18pt-Regular.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
-        <link
-          rel="preload"
-          href="/ABCFavoritMono-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Font loading detection and fallback
-            if ('fonts' in document) {
-              Promise.all([
-                document.fonts.load('300 16px ABCOracle-Light'),
-                document.fonts.load('400 16px ABCOracle-Book'),
-                document.fonts.load('400 16px ABCFavoritMono')
-              ]).then(() => {
-                document.documentElement.classList.add('fonts-loaded');
-              }).catch(() => {
-                document.documentElement.classList.add('fonts-failed');
-              });
-            }
-          `
-        }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <FontLoader />
+        {children}
+      </body>
     </html>
   );
 }
