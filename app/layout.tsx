@@ -24,18 +24,26 @@ export const metadata: Metadata = {
     description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care.",
     creator: "@viewmarkco",
   },
-  icons: {
-    icon: [
-      {
-        url: '/favicon.svg',
-        type: 'image/svg+xml',
-      },
-      {
-        url: '/favicon.ico',
-        type: 'image/x-icon',
-      }
-    ],
-  },
+          icons: {
+          icon: [
+            {
+              url: '/favicon.svg',
+              type: 'image/svg+xml',
+            }
+          ],
+          apple: [
+            {
+              url: '/apple-touch-icon.png',
+              sizes: '180x180',
+              type: 'image/png',
+            }
+          ],
+        },
+        other: {
+          'apple-mobile-web-app-capable': 'yes',
+          'apple-mobile-web-app-status-bar-style': 'default',
+          'apple-mobile-web-app-title': 'Viewmark',
+        },
 };
 
 export default function RootLayout({
@@ -64,6 +72,13 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        
+        {/* iOS PWA and theming support */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Viewmark" />
+        <meta name="theme-color" content="#1A1A1A" />
+        <meta name="msapplication-TileColor" content="#1A1A1A" />
       </head>
       <body>
         <FontLoader />

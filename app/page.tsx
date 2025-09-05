@@ -209,7 +209,7 @@ export default function HomePage() {
                     onFocus={() => {
                       if (emailError) updateFormState({ emailError: "" });
                     }}
-                    placeholder="name@work-email.com"
+                    placeholder="your@email.com"
                     aria-label="Work email address"
                     className={`email-input ${isResetting ? 'input-fade-out' : ''}`}
                     autoComplete="email"
