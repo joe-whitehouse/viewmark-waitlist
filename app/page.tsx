@@ -242,6 +242,11 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* Brands Waiting Text */}
+      <div className="brands-waiting-container">
+        <p className="brands-waiting-text">100+ brands waiting</p>
+      </div>
+
       {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
