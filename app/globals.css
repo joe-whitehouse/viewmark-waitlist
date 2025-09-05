@@ -1134,12 +1134,13 @@ a.contact-text:focus,
   
   .input-wrapper {
     height: 44px;
-    padding-right: 152px;
+    padding-right: 162px;
   }
   
   .submit-button {
-    width: 150px;
+    width: 160px;
     height: 48px;
+    padding: 0 20px;
   }
   
   .submit-button span {
@@ -1147,6 +1148,7 @@ a.contact-text:focus,
     overflow: visible;
     text-overflow: clip;
     font-size: 18px;
+    padding: 0 4px;
   }
   
   .email-input {
@@ -1287,16 +1289,18 @@ a.contact-text:focus,
   
   .input-wrapper {
     height: 42px;
-    padding-right: 122px;
+    padding-right: 132px;
   }
   
   .submit-button {
-    width: 120px;
+    width: 130px;
     height: 46px;
+    padding: 0 16px;
   }
   
   .submit-button span {
     font-size: 18px;
+    padding: 0 4px;
   }
   
   .email-input {
