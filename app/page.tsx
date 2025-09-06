@@ -14,7 +14,7 @@ export default function HomePage() {
     isFadingOut: false,
   });
 
-  const { email, emailError, isLoading, showSuccess, isResetting, isFadingOut } = formState;
+  const { email, emailError, isLoading, showSuccess, isFadingOut } = formState;
 
   const updateFormState = (updates: Partial<FormState>) => {
     setFormState(prev => ({ ...prev, ...updates }));
@@ -252,7 +252,7 @@ export default function HomePage() {
               
               {/* Success Subheader - Centered */}
               <p className="subheader success-fade-in">
-                Limited availability. We'll let you know when a space opens. Don't miss it.
+                Limited availability. We&apos;ll let you know when a space opens. Don&apos;t miss it.
               </p>
               
               {/* Invisible Form Container - Maintains Spacing */}
