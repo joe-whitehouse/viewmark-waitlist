@@ -24,6 +24,7 @@ const config: Config = {
     'logo-container',
     'logo',
     'contact-button',
+    'header-waitlist-button',
     'main-content',
     'content-container',
     'headline',

@@ -111,28 +111,32 @@ export default function HomePage() {
                            <div className="logo-tag-container">
                    <Link href="/" className="logo-link">
                      <svg
-                       width="80"
-                       height="13"
-                       viewBox="0 0 758 124"
+                       width="40"
+                       height="18"
+                       viewBox="0 0 20 9"
                        fill="none"
                        xmlns="http://www.w3.org/2000/svg"
                        className="logo-tag"
                        aria-label="Viewmark Logo"
                    >
-                     <path d="M102.614 21.1024V0.193604H120.039V21.1024H102.614ZM102.614 121.194V35.0416H120.039V121.194H102.614Z" fill="black"/>
-                     <path d="M156.244 83.8288C157.793 99.8976 166.118 108.803 180.832 108.803C191.481 108.803 199.032 103.382 203.485 93.896L218.393 101.834C211.423 115.192 198.064 123.13 181.026 123.13C153.727 123.13 138.625 105.125 138.625 78.2144C138.625 51.304 154.114 33.2992 179.477 33.2992C204.84 33.2992 220.523 50.9168 220.523 78.2144C220.523 80.5376 220.523 82.28 220.329 84.0224H156.631L156.244 83.8288ZM156.437 70.4704H202.13C200.194 55.5632 192.062 47.432 179.284 47.432C166.505 47.432 158.374 55.3696 156.437 70.4704Z" fill="black"/>
-                     <path d="M342.885 35.0416H361.471L331.655 121.194H314.23L292.739 56.5312L271.249 121.194H253.824L224.008 35.0416H242.594L262.73 98.3488L283.64 35.0416H302.226L323.136 98.3488L343.078 35.0416H342.885Z" fill="black"/>
-                     <path d="M496.999 62.1456V121.194H479.574V66.0176C479.574 54.0144 472.604 47.8192 462.536 47.8192C451.694 47.8192 444.143 55.3696 444.143 68.1472V121.194H426.718V66.0176C426.718 54.0144 419.748 47.8192 409.681 47.8192C398.838 47.8192 391.288 55.3696 391.288 68.1472V121.194H373.863V35.0416H391.288V48.2064C395.934 39.1072 405.228 33.2992 416.457 33.2992C428.654 33.2992 437.754 39.1072 441.82 48.9808C447.628 38.72 457.115 33.2992 467.957 33.2992C484.995 33.2992 497.193 44.7216 497.193 62.1456H496.999Z" fill="black"/>
-                     <path d="M512.294 78.0208C512.294 50.7232 527.009 33.1056 550.242 33.1056C561.665 33.1056 572.314 38.9136 577.347 47.432V34.848H594.772V121H577.347V108.416C572.507 117.128 561.665 122.742 550.242 122.742C527.202 122.742 512.294 105.125 512.294 77.8272V78.0208ZM577.347 78.0208C577.347 59.2416 568.829 47.8192 554.114 47.8192C539.4 47.8192 530.687 59.2416 530.687 78.0208C530.687 96.8 539.593 108.416 554.114 108.416C568.635 108.416 577.347 97.1872 577.347 78.0208Z" fill="black"/>
-                     <path d="M737.657 121.194L711.52 81.312L696.418 97.5744V121H678.993V0H696.418V76.472L735.334 34.6544H756.825L723.717 69.5024L757.793 120.806H737.464L737.657 121.194Z" fill="black"/>
-                     <path d="M663.698 35.0416H633.882H616.457V50.9168V121.194H633.882V50.9168H663.698V35.0416Z" fill="black"/>
-                     <path d="M66.0213 35.0416H84.6079L50.9197 121.194H33.4947L0 35.0416H18.5866L42.2072 100.091L66.0213 35.0416Z" fill="black"/>
+                     <path d="M1.63 4.02979V8.04979H0V4.02979" fill="black"/>
+                     <path d="M1.62988 4.03V0H3.25988V4.03" fill="black"/>
+                     <path d="M1.62988 8.04979L3.25988 4.02979H4.87988L3.25988 8.04979" fill="black"/>
+                     <path d="M4.87988 4.03L6.50988 0H8.13988L6.50988 4.03" fill="black"/>
+                     <path d="M17.9194 4.03V0H19.5494V4.03" fill="black"/>
+                     <path d="M17.9195 4.02979V8.04979H16.2896V4.02979" fill="black"/>
+                     <path d="M17.9197 0L16.2897 4.03H14.6597L16.2897 0" fill="black"/>
+                     <path d="M14.6597 4.02979L13.0397 8.04979H11.4097L13.0397 4.02979" fill="black"/>
+                     <path d="M11.4097 4.03V0H13.0397V4.03" fill="black"/>
+                     <path d="M11.4098 4.02979V8.04979H9.77979V4.02979" fill="black"/>
+                     <path d="M11.4099 0L9.7799 4.03H8.1499L9.7799 0" fill="black"/>
+                     <path d="M8.1499 4.02979L6.5299 8.04979H4.8999L6.5299 4.02979" fill="black"/>
                    </svg>
                    </Link>
                  </div>
           
           {/* Navigation */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <a 
               href="mailto:hello@viewmark.co"
               className="contact-text"
@@ -140,6 +144,18 @@ export default function HomePage() {
             >
               Contact
             </a>
+            <button
+              onClick={() => {
+                const emailInput = document.querySelector('.email-input') as HTMLInputElement;
+                if (emailInput) {
+                  emailInput.focus();
+                }
+              }}
+              className="header-waitlist-button"
+              aria-label="Join waitlist"
+            >
+              Join waitlist
+            </button>
           </div>
         </div>
       </header>
@@ -147,44 +163,12 @@ export default function HomePage() {
       {/* Main Content - Single Column Layout */}
       <div className="main-content">
         <div className="content-container">
-          {/* Sticker Logo - Centered */}
-          <div className="sticker-logo-container">
-            <svg width="682" height="314" viewBox="0 0 682 314" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g filter="url(#filter0_d_50_3)">
-                <path d="M524.491 310.286V181.417H515.419L463.356 310.286H316.067V181.417H307.149L254.914 310.286H3V129.869H55.0632V1H158.674V129.869H167.747L219.81 1H471.741V129.869H480.658L532.894 1H680.165V181.417H628.102V310.286H524.491Z" fill="white"/>
-              </g>
-              <path d="M80.8364 155.643L80.8364 284.512H28.7734L28.7734 155.643" fill="#1D1C1B"/>
-              <path d="M80.8379 155.643L80.8379 26.7739L132.901 26.7739V155.643" fill="#1D1C1B"/>
-              <path d="M80.8379 284.512L132.901 155.643H185.136L132.901 284.512" fill="#1D1C1B"/>
-              <path d="M185.134 155.643L237.197 26.7739L289.26 26.7739L237.197 155.643" fill="#1D1C1B"/>
-              <path d="M602.33 155.643V26.7739L654.393 26.7739V155.643" fill="#1D1C1B"/>
-              <path d="M602.328 155.643V284.512H550.265V155.643" fill="#1D1C1B"/>
-              <path d="M602.327 26.7739L550.264 155.643H498.029L550.264 26.7739" fill="#1D1C1B"/>
-              <path d="M498.03 155.643L445.967 284.512H393.904L445.967 155.643" fill="#1D1C1B"/>
-              <path d="M393.903 155.643V26.7739L445.966 26.7739V155.643" fill="#1D1C1B"/>
-              <path d="M393.902 155.643V284.512H341.839V155.643" fill="#1D1C1B"/>
-              <path d="M393.904 26.7739L341.841 155.643H289.778L341.841 26.7739" fill="#1D1C1B"/>
-              <path d="M289.776 155.643L237.542 284.512H185.479L237.542 155.643" fill="#1D1C1B"/>
-              <defs>
-                <filter id="filter0_d_50_3" x="0" y="0" width="681.165" height="313.286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                  <feOffset dx="-1" dy="1"/>
-                  <feGaussianBlur stdDeviation="1"/>
-                  <feComposite in2="hardAlpha" operator="out"/>
-                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_50_3"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_50_3" result="shape"/>
-                </filter>
-              </defs>
-            </svg>
-          </div>
           
           {/* Headline - Centered */}
           <h1 className="headline">
             <span className="headline-primary">
               Put your brand on <br className="mobile-break" />
-              viral videos
+              viral videos.
             </span>
           </h1>
           
@@ -226,29 +210,26 @@ export default function HomePage() {
                   aria-label={isLoading ? "Submitting..." : showSuccess ? "Done" : "Join waitlist"}
                 >
                   <span className={isLoading || isResetting ? "text-fade-out" : ""}>
-                    {showSuccess ? "Done" : "Join Waitlist"}
+                    {showSuccess ? "Done" : "Join waitlist"}
                   </span>
                   {isLoading && (
                     <div className="loading-spinner" aria-hidden="true"></div>
                   )}
                 </button>
+                
+                <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
+                  {emailError || ' '}
+                </p>
               </div>
-              
-              <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
-                {emailError || ' '}
-              </p>
             </form>
           </div>
-        </div>
-      </div>
 
-      {/* Brands Waiting Text */}
-      <div className="brands-waiting-container">
-        <p className="brands-waiting-text">100+ brands waiting</p>
+        </div>
       </div>
 
       {/* Footer */}
       <footer className="footer">
+        <div className="footer-border"></div>
         <div className="footer-container">
           <div className="footer-content">
             {/* Copyright */}

@@ -79,6 +79,13 @@ export default function RootLayout({
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href="/fonts/Inter_18pt-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         
         {/* iOS PWA and theming support */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
