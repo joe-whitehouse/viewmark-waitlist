@@ -3,7 +3,7 @@ import "./globals.css";
 import FontLoader from "./components/FontLoader";
 
 export const metadata: Metadata = {
-  title: "Viewmark – Put your logo on viral content",
+  title: "Viewmark – Put your brand on viral videos",
   description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care. Join the waitlist for Viewmark.",
   keywords: "viral marketing, brand visibility, logo placement, content marketing, waitlist",
   authors: [{ name: "Viewmark" }],
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   publisher: "Viewmark",
   robots: "index, follow",
   openGraph: {
-    title: "Viewmark – Put your logo on viral content",
+    title: "Viewmark – Put your brand on viral videos",
     description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care.",
     type: "website",
     url: "https://viewmark.co",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Viewmark – Put your logo on viral content",
+    title: "Viewmark – Put your brand on viral videos",
     description: "Stop wasting money on ads no one watches. Get your brand seen by millions who actually care.",
     creator: "@viewmarkco",
   },
@@ -33,16 +33,21 @@ export const metadata: Metadata = {
           ],
           apple: [
             {
+              url: '/apple-touch-icon-dark.png',
+              sizes: '180x180',
+              type: 'image/png',
+              media: '(prefers-color-scheme: dark)',
+            },
+            {
               url: '/apple-touch-icon-light.png',
               sizes: '180x180',
               type: 'image/png',
               media: '(prefers-color-scheme: light)',
             },
             {
-              url: '/apple-touch-icon-dark.png',
+              url: '/apple-touch-icon-light.png',
               sizes: '180x180',
               type: 'image/png',
-              media: '(prefers-color-scheme: dark)',
             }
           ],
         },
