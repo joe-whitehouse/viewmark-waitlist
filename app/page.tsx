@@ -11,12 +11,24 @@ export default function HomePage() {
     isLoading: false,
     showSuccess: false,
     isResetting: false,
+    isFadingOut: false,
   });
 
-  const { email, emailError, isLoading, showSuccess, isResetting } = formState;
+  const { email, emailError, isLoading, showSuccess, isResetting, isFadingOut } = formState;
 
   const updateFormState = (updates: Partial<FormState>) => {
     setFormState(prev => ({ ...prev, ...updates }));
+  };
+
+  const resetToOriginalState = () => {
+    updateFormState({
+      showSuccess: false,
+      email: "",
+      emailError: "",
+      isResetting: false,
+      isLoading: false,
+      isFadingOut: false
+    });
   };
 
   const validateEmail = (email: string) => {
@@ -47,50 +59,53 @@ export default function HomePage() {
     
     updateFormState({ isLoading: true });
     
-    // Minimum loading time of 2 seconds for better UX
-    const startTime = Date.now();
-    const minLoadingTime = 2000;
-    
     try {
-      const response = await fetch('/.netlify/functions/submit-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: email.trim() } as EmailSubmission),
-      });
-
-      const data: EmailResponse = await response.json();
-
-      if (!response.ok) {
-        // Handle specific error cases
-        if (response.status === 409) {
-          throw new Error('This email is already on the waitlist!');
-        }
-        throw new Error(data.error || 'Failed to submit email');
-      }
-
-      // Ensure minimum loading time
-      const elapsedTime = Date.now() - startTime;
-      const remainingTime = Math.max(0, minLoadingTime - elapsedTime);
+      // Check if we're on localhost for testing
+      const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
       
-      await new Promise(resolve => setTimeout(resolve, remainingTime));
-      
-      updateFormState({ isLoading: false, showSuccess: true });
-      
-      // Show success message for 3 seconds, then reset
-      setTimeout(() => {
-        updateFormState({ isResetting: true });
-        // Small delay to allow fade out, then reset
+      if (isLocalhost) {
+        // Mock response for localhost testing
+        console.log('Localhost detected - using mock response');
+        
+        // Show "Joining..." for 1 second, then start fade out
         setTimeout(() => {
-          updateFormState({
-            showSuccess: false,
-            email: "",
-            emailError: "",
-            isResetting: false
-          });
-        }, 400);
-      }, 2000);
+          updateFormState({ isLoading: false, isFadingOut: true });
+          
+          // Wait for fade out animation, then show success immediately
+          setTimeout(() => {
+            updateFormState({ showSuccess: true, isFadingOut: false });
+          }, 600);
+        }, 1000);
+      } else {
+        // Production API call
+        const response = await fetch('/.netlify/functions/submit-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email: email.trim() } as EmailSubmission),
+        });
+
+        const data: EmailResponse = await response.json();
+
+        if (!response.ok) {
+          // Handle specific error cases
+          if (response.status === 409) {
+            throw new Error('This email is already on the waitlist!');
+          }
+          throw new Error(data.error || 'Failed to submit email');
+        }
+        
+        // Show "Joining..." for 1 second, then start fade out
+        setTimeout(() => {
+          updateFormState({ isLoading: false, isFadingOut: true });
+          
+          // Wait for fade out animation, then show success immediately
+          setTimeout(() => {
+            updateFormState({ showSuccess: true, isFadingOut: false });
+          }, 600);
+        }, 1000);
+      }
       
     } catch (error) {
       console.error('Submission error:', error);
@@ -109,7 +124,7 @@ export default function HomePage() {
         <div className="header-container">
           {/* Logo Tag */}
                            <div className="logo-tag-container">
-                   <Link href="/" className="logo-link">
+                   <Link href="/" className="logo-link" onClick={resetToOriginalState}>
                      <svg
                        width="40"
                        height="18"
@@ -146,13 +161,17 @@ export default function HomePage() {
             </a>
             <button
               onClick={() => {
-                const emailInput = document.querySelector('.email-input') as HTMLInputElement;
-                if (emailInput) {
-                  emailInput.focus();
+                if (showSuccess) {
+                  resetToOriginalState();
+                } else {
+                  const emailInput = document.querySelector('.email-input') as HTMLInputElement;
+                  if (emailInput) {
+                    emailInput.focus();
+                  }
                 }
               }}
               className="header-waitlist-button"
-              aria-label="Join waitlist"
+              aria-label={showSuccess ? "Return to form" : "Join waitlist"}
             >
               Join waitlist
             </button>
@@ -164,65 +183,101 @@ export default function HomePage() {
       <div className="main-content">
         <div className="content-container">
           
-          {/* Headline - Centered */}
-          <h1 className="headline">
-            <span className="headline-primary">
-              Put your brand on <br className="mobile-break" />
-              viral videos.
-            </span>
-          </h1>
-          
-          {/* Subheader - Centered */}
-          <p className="subheader">
-            Real views. Real audiences. <br className="mobile-break" />
-            Zero wasted ad spend.
-          </p>
-          
-          {/* Email Form - Centered */}
-          <div className="form-container">
-            <form onSubmit={handleSubmit} className="email-form" noValidate>
-              <div className={`input-group ${emailError ? 'error' : ''}`}>
-                <div className="input-wrapper">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => {
-                      updateFormState({ email: e.target.value });
-                      if (emailError) updateFormState({ emailError: "" });
-                    }}
-                    onFocus={() => {
-                      if (emailError) updateFormState({ emailError: "" });
-                    }}
-                    placeholder="your@email.com"
-                    aria-label="Work email address"
-                    className={`email-input ${isResetting ? 'input-fade-out' : ''}`}
-                    autoComplete="email"
-                    autoCapitalize="none"
-                    autoCorrect="off"
-                    spellCheck="false"
-                    inputMode="email"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={isLoading || showSuccess}
-                  className={`submit-button ${isLoading ? 'loading' : ''}`}
-                  aria-label={isLoading ? "Submitting..." : showSuccess ? "Done" : "Join waitlist"}
-                >
-                  <span className={isLoading || isResetting ? "text-fade-out" : ""}>
-                    {showSuccess ? "Done" : "Join waitlist"}
-                  </span>
-                  {isLoading && (
-                    <div className="loading-spinner" aria-hidden="true"></div>
-                  )}
-                </button>
-                
-                <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
-                  {emailError || ' '}
-                </p>
+          {!showSuccess ? (
+            <>
+              {/* Headline - Centered */}
+              <h1 className={`headline ${isFadingOut ? 'fade-out-1' : ''}`}>
+                <span className="headline-primary">
+                  Put your brand on <br className="mobile-break" />
+                  viral videos.
+                </span>
+              </h1>
+              
+              {/* Subheader - Centered */}
+              <p className={`subheader ${isFadingOut ? 'fade-out-2' : ''}`}>
+                Real views. Real audiences. <br className="mobile-break" />
+                Zero wasted ad spend.
+              </p>
+              
+              {/* Email Form - Centered */}
+              <div className={`form-container ${isFadingOut ? 'fade-out-3' : ''}`}>
+                <form onSubmit={handleSubmit} className="email-form" noValidate>
+                  <div className={`input-group ${emailError ? 'error' : ''}`}>
+                    <div className="input-wrapper">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => {
+                          updateFormState({ email: e.target.value });
+                          if (emailError) updateFormState({ emailError: "" });
+                        }}
+                        onFocus={() => {
+                          if (emailError) updateFormState({ emailError: "" });
+                        }}
+                        placeholder="your@email.com"
+                        aria-label="Work email address"
+                        className="email-input"
+                        autoComplete="email"
+                        autoCapitalize="none"
+                        autoCorrect="off"
+                        spellCheck="false"
+                        inputMode="email"
+                        disabled={isLoading || isFadingOut}
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isLoading || showSuccess || isFadingOut}
+                      className={`submit-button ${isFadingOut ? 'submitted' : ''}`}
+                      aria-label={isLoading || isFadingOut ? "Joining..." : "Join waitlist"}
+                    >
+                      <span>{isLoading || isFadingOut ? "Joining..." : "Join waitlist"}</span>
+                    </button>
+                    
+                    <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
+                      {emailError || ' '}
+                    </p>
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
+            </>
+          ) : (
+            <>
+              {/* Success Headline - Centered */}
+              <h1 className="headline success-fade-in">
+                <span className="headline-primary">
+                  Waitlist spot secured
+                </span>
+              </h1>
+              
+              {/* Success Subheader - Centered */}
+              <p className="subheader success-fade-in">
+                Limited availability. We'll let you know when a space opens. Don't miss it.
+              </p>
+              
+              {/* Invisible Form Container - Maintains Spacing */}
+              <div className="form-container" style={{ visibility: 'hidden', height: 'auto' }}>
+                <div className="input-group">
+                  <div className="input-wrapper">
+                    <input
+                      type="email"
+                      placeholder="your@email.com"
+                      aria-label="Work email address"
+                      className="email-input"
+                      disabled
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    className="submit-button"
+                    disabled
+                  >
+                    <span>Join waitlist</span>
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
 
         </div>
       </div>
