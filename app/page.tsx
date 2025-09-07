@@ -93,8 +93,8 @@ export default function HomePage() {
         if (!response.ok) {
           // Handle specific error cases
           if (response.status === 409) {
-            const error = new Error('This email is already on the waitlist!');
-            (error as any).isAlreadyExists = true;
+            const error = new Error('This email is already on the waitlist!') as Error & { isAlreadyExists: boolean };
+            error.isAlreadyExists = true;
             throw error;
           }
           throw new Error(data.error || 'Failed to submit email');
@@ -115,7 +115,7 @@ export default function HomePage() {
       console.error('Submission error:', error);
       updateFormState({ isLoading: false });
       const errorMessage = error instanceof Error ? error.message : "Failed to submit email. Please try again.";
-      const isAlreadyExists = error instanceof Error && (error as any).isAlreadyExists;
+      const isAlreadyExists = error instanceof Error && 'isAlreadyExists' in error && (error as Error & { isAlreadyExists: boolean }).isAlreadyExists;
       updateFormState({ 
         emailError: errorMessage,
         isAlreadyExists: isAlreadyExists
