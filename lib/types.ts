@@ -15,4 +15,5 @@ export interface FormState {
   showSuccess: boolean;
   isResetting: boolean;
   isFadingOut: boolean;
+  isAlreadyExists: boolean;
 }

@@ -740,6 +740,10 @@ a.contact-text:focus,
   border: 1px solid #ef4444;
 }
 
+.input-group.error.already-exists {
+  border: 1px solid #3b82f6;
+}
+
 
 
 .input-wrapper {
@@ -963,6 +967,10 @@ a.contact-text:focus,
   transition: opacity 0.4s ease;
   font-family: 'Inter_18pt-Medium', sans-serif;
   z-index: 10;
+}
+
+.error-message.already-exists {
+  color: #3b82f6;
 }
 
 .error-visible {

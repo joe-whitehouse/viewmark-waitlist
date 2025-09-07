@@ -12,9 +12,10 @@ export default function HomePage() {
     showSuccess: false,
     isResetting: false,
     isFadingOut: false,
+    isAlreadyExists: false,
   });
 
-  const { email, emailError, isLoading, showSuccess, isFadingOut } = formState;
+  const { email, emailError, isLoading, showSuccess, isFadingOut, isAlreadyExists } = formState;
 
   const updateFormState = (updates: Partial<FormState>) => {
     setFormState(prev => ({ ...prev, ...updates }));
@@ -27,7 +28,8 @@ export default function HomePage() {
       emailError: "",
       isResetting: false,
       isLoading: false,
-      isFadingOut: false
+      isFadingOut: false,
+      isAlreadyExists: false
     });
   };
 
@@ -91,7 +93,9 @@ export default function HomePage() {
         if (!response.ok) {
           // Handle specific error cases
           if (response.status === 409) {
-            throw new Error('This email is already on the waitlist!');
+            const error = new Error('This email is already on the waitlist!');
+            (error as any).isAlreadyExists = true;
+            throw error;
           }
           throw new Error(data.error || 'Failed to submit email');
         }
@@ -110,8 +114,11 @@ export default function HomePage() {
     } catch (error) {
       console.error('Submission error:', error);
       updateFormState({ isLoading: false });
+      const errorMessage = error instanceof Error ? error.message : "Failed to submit email. Please try again.";
+      const isAlreadyExists = error instanceof Error && (error as any).isAlreadyExists;
       updateFormState({ 
-        emailError: error instanceof Error ? error.message : "Failed to submit email. Please try again." 
+        emailError: errorMessage,
+        isAlreadyExists: isAlreadyExists
       });
     }
   };
@@ -195,7 +202,7 @@ export default function HomePage() {
               {/* Email Form - Centered */}
               <div className={`form-container ${isFadingOut ? 'fade-out-3' : ''}`}>
                 <form onSubmit={handleSubmit} className="email-form" noValidate>
-                  <div className={`input-group ${emailError ? 'error' : ''}`}>
+                  <div className={`input-group ${emailError ? 'error' : ''} ${isAlreadyExists ? 'already-exists' : ''}`}>
                     <div className="input-wrapper">
                       <input
                         type="email"
@@ -227,7 +234,7 @@ export default function HomePage() {
                       <span>{isLoading || isFadingOut ? "Joining..." : "Join waitlist"}</span>
                     </button>
                     
-                    <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
+                    <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'} ${isAlreadyExists ? 'already-exists' : ''}`} role="alert">
                       {emailError || ' '}
                     </p>
                   </div>
