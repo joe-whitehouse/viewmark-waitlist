@@ -12,10 +12,9 @@ export default function HomePage() {
     showSuccess: false,
     isResetting: false,
     isFadingOut: false,
-    isAlreadyExists: false,
   });
 
-  const { email, emailError, isLoading, showSuccess, isFadingOut, isAlreadyExists } = formState;
+  const { email, emailError, isLoading, showSuccess, isFadingOut } = formState;
 
   const updateFormState = (updates: Partial<FormState>) => {
     setFormState(prev => ({ ...prev, ...updates }));
@@ -28,8 +27,7 @@ export default function HomePage() {
       emailError: "",
       isResetting: false,
       isLoading: false,
-      isFadingOut: false,
-      isAlreadyExists: false
+      isFadingOut: false
     });
   };
 
@@ -93,9 +91,7 @@ export default function HomePage() {
         if (!response.ok) {
           // Handle specific error cases
           if (response.status === 409) {
-            const error = new Error('This email is already on the waitlist!') as Error & { isAlreadyExists: boolean };
-            error.isAlreadyExists = true;
-            throw error;
+            throw new Error('This email is already on the waitlist!');
           }
           throw new Error(data.error || 'Failed to submit email');
         }
@@ -114,11 +110,8 @@ export default function HomePage() {
     } catch (error) {
       console.error('Submission error:', error);
       updateFormState({ isLoading: false });
-      const errorMessage = error instanceof Error ? error.message : "Failed to submit email. Please try again.";
-      const isAlreadyExists = error instanceof Error && 'isAlreadyExists' in error && (error as Error & { isAlreadyExists: boolean }).isAlreadyExists;
       updateFormState({ 
-        emailError: errorMessage,
-        isAlreadyExists: isAlreadyExists
+        emailError: error instanceof Error ? error.message : "Failed to submit email. Please try again." 
       });
     }
   };
@@ -202,7 +195,7 @@ export default function HomePage() {
               {/* Email Form - Centered */}
               <div className={`form-container ${isFadingOut ? 'fade-out-3' : ''}`}>
                 <form onSubmit={handleSubmit} className="email-form" noValidate>
-                  <div className={`input-group ${emailError ? 'error' : ''} ${isAlreadyExists ? 'already-exists' : ''}`}>
+                  <div className={`input-group ${emailError ? 'error' : ''}`}>
                     <div className="input-wrapper">
                       <input
                         type="email"
@@ -234,7 +227,7 @@ export default function HomePage() {
                       <span>{isLoading || isFadingOut ? "Joining..." : "Join waitlist"}</span>
                     </button>
                     
-                    <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'} ${isAlreadyExists ? 'already-exists' : ''}`} role="alert">
+                    <p className={`error-message ${emailError ? 'error-visible' : 'error-hidden'}`} role="alert">
                       {emailError || ' '}
                     </p>
                   </div>
