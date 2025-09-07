@@ -152,13 +152,6 @@ export default function HomePage() {
           
           {/* Navigation */}
           <div className="flex items-center space-x-2">
-            <a 
-              href="mailto:hello@viewmark.co"
-              className="contact-text"
-              aria-label="Contact us via email"
-            >
-              Contact
-            </a>
             <button
               onClick={() => {
                 if (showSuccess) {
@@ -187,7 +180,7 @@ export default function HomePage() {
             <>
               {/* Headline - Centered */}
               <h1 className={`headline ${isFadingOut ? 'fade-out-1' : ''}`}>
-                <span className="headline-primary">
+                <span className="headline-primary gradient-text">
                   Put your brand on <br className="mobile-break" />
                   viral videos.
                 </span>

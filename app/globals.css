@@ -90,9 +90,10 @@ a:link {
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary-text: rgba(0, 0, 0, 0.92);
-  --secondary-text: rgba(0, 0, 0, 0.65);
-  --tertiary-text: rgba(0, 0, 0, 0.7);
+  --primary-text: #1a1a1a;
+  --secondary-text: #4a4d5a;
+  --tertiary-text: #6b7280;
+  --placeholder-text: #9ca3af;
   --error-color: #dc2626;
   --success-color: #22c55e;
   --border-color: rgba(0, 0, 0, 0.12);
@@ -168,17 +169,17 @@ html {
     -webkit-user-select: none !important;
     -webkit-focus-ring-color: transparent !important;
     outline: none !important;
-    color: #6b7280 !important;
+    color: var(--secondary-text) !important;
   }
   
   .contact-text:hover {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
     -webkit-appearance: none !important;
     outline: none !important;
   }
   
   .contact-text:focus {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
     -webkit-appearance: none !important;
     -webkit-focus-ring-color: transparent !important;
     outline: none !important;
@@ -187,19 +188,19 @@ html {
   }
   
   .contact-text:active {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
     -webkit-appearance: none !important;
     outline: none !important;
   }
   
   .contact-text:visited {
-    color: #6b7280 !important;
+    color: var(--secondary-text) !important;
     -webkit-appearance: none !important;
     outline: none !important;
   }
   
   .contact-text:link {
-    color: #6b7280 !important;
+    color: var(--secondary-text) !important;
     -webkit-appearance: none !important;
     outline: none !important;
   }
@@ -331,7 +332,7 @@ body::before {
   justify-content: center;
   height: 32px;
   padding: 0 16px;
-  color: #6b7280 !important;
+  color: var(--secondary-text) !important;
   font-size: clamp(11px, 2.8vw, 13px);
   font-family: 'Inter_18pt-Regular', sans-serif !important;
   letter-spacing: -0.01em;
@@ -353,7 +354,7 @@ body::before {
 }
 
 .contact-text:hover {
-  color: #000000 !important;
+  color: var(--primary-text) !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -362,7 +363,7 @@ body::before {
 
 .contact-text:focus {
   outline: none !important;
-  color: #6b7280 !important;
+  color: var(--secondary-text) !important;
   box-shadow: none !important;
   border: none !important;
   background: transparent !important;
@@ -378,7 +379,7 @@ body::before {
 
 .contact-text:active {
   outline: none !important;
-  color: #6b7280 !important;
+  color: var(--secondary-text) !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -386,7 +387,7 @@ body::before {
 }
 
 .contact-text:visited {
-  color: #6b7280 !important;
+  color: var(--secondary-text) !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -394,7 +395,7 @@ body::before {
 }
 
 .contact-text:link {
-  color: #6b7280 !important;
+  color: var(--secondary-text) !important;
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -416,7 +417,7 @@ body::before {
   font-family: 'Inter_18pt-Regular', sans-serif;
   text-decoration: none;
   border-radius: 0.5rem;
-  background: linear-gradient(to bottom, oklch(80.9% .105 251.813), oklch(62.3% .214 259.815));
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
   border: none;
   transition: opacity 0.2s ease;
   user-select: none;
@@ -448,7 +449,7 @@ body::before {
 /* Additional specificity for contact-text */
 a.contact-text,
 .contact-text a {
-  color: #6b7280 !important;
+  color: var(--secondary-text) !important;
   text-decoration: none !important;
   outline: none !important;
   background: transparent !important;
@@ -458,12 +459,12 @@ a.contact-text,
 
 a.contact-text:hover,
 .contact-text a:hover {
-  color: #000000 !important;
+  color: var(--primary-text) !important;
 }
 
 a.contact-text:focus,
 .contact-text a:focus {
-  color: #000000 !important;
+  color: var(--primary-text) !important;
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
@@ -471,7 +472,7 @@ a.contact-text:focus,
 }
 
 .logo {
-  color: #000000;
+  color: var(--primary-text);
   outline: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -542,7 +543,7 @@ a.contact-text:focus,
 }
 
 .brands-waiting-text {
-  color: #000000;
+  color: var(--primary-text);
   font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -603,7 +604,7 @@ a.contact-text:focus,
   line-height: 1.4;
   text-align: center;
   margin: 0 0 32px 0;
-  color: #5e616e;
+  color: var(--secondary-text);
   font-weight: 400;
   width: 100%;
 }
@@ -626,7 +627,15 @@ a.contact-text:focus,
 
 
 .headline-primary {
-  color: #040406;
+  color: var(--primary-text);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #3a3a3a 50%, #2d2d2d 75%, #1a1a1a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
 }
 
 .mobile-break {
@@ -776,12 +785,12 @@ a.contact-text:focus,
 }
 
 .email-input::placeholder {
-  color: #5e616e;
+  color: var(--placeholder-text);
   font-family: 'Inter_18pt-Regular', monospace;
 }
 
 .email-input:disabled {
-  color: #5e616e;
+  color: var(--placeholder-text);
 }
 
 .input-group:has(.email-input:disabled) {
@@ -790,11 +799,11 @@ a.contact-text:focus,
 }
 
 .input-group.error .email-input {
-  color: #000000;
+  color: var(--primary-text);
 }
 
 .input-group.error .email-input::placeholder {
-  color: #5e616e;
+  color: var(--placeholder-text);
   font-family: 'Inter_18pt-Regular', monospace;
 }
 
@@ -814,7 +823,7 @@ a.contact-text:focus,
 }
 
 .url-input::placeholder {
-  color: #5e616e;
+  color: var(--placeholder-text);
 }
 
 .input-group.error .url-input {
@@ -846,7 +855,7 @@ a.contact-text:focus,
   font-family: 'Inter_18pt-Regular', sans-serif;
   z-index: 3;
   border-radius: 0.75rem;
-  background: linear-gradient(to bottom, oklch(80.9% .105 251.813), oklch(62.3% .214 259.815));
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
   border: none;
   transform: translateY(-50%);
   transition: opacity 0.2s ease;
@@ -892,20 +901,20 @@ a.contact-text:focus,
 }
 
 .submit-button:disabled {
-  background: linear-gradient(to bottom, oklch(80.9% .105 251.813), oklch(62.3% .214 259.815));
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
   border: none;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .submit-button.loading {
-  background: linear-gradient(to bottom, oklch(80.9% .105 251.813), oklch(62.3% .214 259.815)) !important;
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%) !important;
   border: none !important;
   cursor: not-allowed;
 }
 
 .submit-button:disabled:not(.loading) {
-  background: linear-gradient(to bottom, oklch(80.9% .105 251.813), oklch(62.3% .214 259.815)) !important;
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%) !important;
   border: none !important;
   cursor: not-allowed;
   opacity: 0.6;
@@ -1035,11 +1044,11 @@ a.contact-text:focus,
 }
 
 .copyright {
-  font-size: clamp(13px, 3.2vw, 15px);
+  font-size: clamp(11px, 2.8vw, 13px);
   line-height: calc(1em + 4px);
   font-family: 'Inter_18pt-Medium', sans-serif;
   letter-spacing: -0.01em;
-  color: #6b7280;
+  color: var(--tertiary-text);
   white-space: nowrap;
 }
 
@@ -1050,7 +1059,7 @@ a.contact-text:focus,
 }
 
 .social-link {
-  color: #000000 !important;
+  color: var(--primary-text) !important;
   transition: opacity 0.2s ease;
 }
 
@@ -1059,7 +1068,7 @@ a.contact-text:focus,
 }
 
 .social-link svg {
-  color: #000000 !important;
+  color: var(--primary-text) !important;
   fill: #000000 !important;
 }
 
@@ -1070,7 +1079,7 @@ a.contact-text:focus,
 .social-link:hover,
 .social-link:active,
 .social-link:focus {
-  color: #000000 !important;
+  color: var(--primary-text) !important;
 }
 
 /* Animations */
@@ -1230,7 +1239,7 @@ a.contact-text:focus,
   
   
   .contact-text {
-    color: #6b7280 !important;
+    color: var(--secondary-text) !important;
     outline: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -1242,12 +1251,12 @@ a.contact-text:focus,
   }
   
   .contact-text:hover {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
   }
   
   .contact-text:focus {
     outline: none !important;
-    color: #000000 !important;
+    color: var(--primary-text) !important;
     box-shadow: none !important;
     border: none !important;
   }
@@ -1260,15 +1269,15 @@ a.contact-text:focus,
   
   .contact-text:active {
     outline: none !important;
-    color: #000000 !important;
+    color: var(--primary-text) !important;
   }
   
   .contact-text:visited {
-    color: #6b7280 !important;
+    color: var(--secondary-text) !important;
   }
   
   .contact-text:link {
-    color: #6b7280 !important;
+    color: var(--secondary-text) !important;
   }
   
   .headline {
@@ -1319,7 +1328,7 @@ a.contact-text:focus,
   }
   
   .copyright {
-    font-size: clamp(13px, 3.2vw, 15px);
+    font-size: clamp(11px, 2.8vw, 13px);
     white-space: nowrap;
   }
   
@@ -1401,7 +1410,7 @@ a.contact-text:focus,
   }
   
   .copyright {
-    font-size: clamp(13px, 3.2vw, 15px);
+    font-size: clamp(11px, 2.8vw, 13px);
     white-space: normal;
   }
   
@@ -1426,11 +1435,11 @@ a.contact-text:focus,
   }
   
   .social-link {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
   }
   
   .social-link svg {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
     fill: #000000 !important;
   }
   
@@ -1441,7 +1450,7 @@ a.contact-text:focus,
   .social-link:hover,
   .social-link:active,
   .social-link:focus {
-    color: #000000 !important;
+    color: var(--primary-text) !important;
   }
   
   /* Form optimizations for very small screens */
@@ -1766,7 +1775,7 @@ a.contact-text:focus,
   font-family: 'Inter_18pt-Regular', sans-serif;
   text-decoration: none;
   border-radius: 0.75rem;
-  background: linear-gradient(to bottom, #4a4a4a, #1a1a1a);
+  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
   border: none;
   transition: opacity 0.2s ease;
   user-select: none;
