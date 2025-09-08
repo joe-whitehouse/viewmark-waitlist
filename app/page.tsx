@@ -170,6 +170,8 @@ export default function HomePage() {
             </button>
           </div>
         </div>
+        {/* Blur & fade layer (structural overlay like Cluely) */}
+        <div className="header-blur" aria-hidden="true"></div>
       </header>
 
       {/* Main Content - Single Column Layout */}

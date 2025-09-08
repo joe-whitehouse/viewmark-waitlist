@@ -57,24 +57,16 @@ export default function RootLayout({
 
 
 
+        {/* Online Inter font */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+        />
+
         {/* Preload critical fonts to prevent FOUT */}
         <link
           rel="preload"
           href="/fonts/neueSingular-D-Medium.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter_18pt-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter_18pt-Medium.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
