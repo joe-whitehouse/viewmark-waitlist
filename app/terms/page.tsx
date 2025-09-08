@@ -25,20 +25,21 @@ export default function TermsPage() {
                 className="logo-tag"
                 aria-label="Viewmark Logo"
               >
-                <path d="M1.63 4.02979V8.04979H0V4.02979" fill="black"/>
-                <path d="M1.62988 4.03V0H3.25988V4.03" fill="black"/>
-                <path d="M1.62988 8.04979L3.25988 4.02979H4.87988L3.25988 8.04979" fill="black"/>
-                <path d="M4.87988 4.03L6.50988 0H8.13988L6.50988 4.03" fill="black"/>
-                <path d="M17.9194 4.03V0H19.5494V4.03" fill="black"/>
-                <path d="M17.9195 4.02979V8.04979H16.2896V4.02979" fill="black"/>
-                <path d="M17.9197 0L16.2897 4.03H14.6597L16.2897 0" fill="black"/>
-                <path d="M14.6597 4.02979L13.0397 8.04979H11.4097L13.0397 4.02979" fill="black"/>
-                <path d="M11.4097 4.03V0H13.0397V4.03" fill="black"/>
-                <path d="M11.4098 4.02979V8.04979H9.77979V4.02979" fill="black"/>
-                <path d="M11.4099 0L9.7799 4.03H8.1499L9.7799 0" fill="black"/>
-                <path d="M8.1499 4.02979L6.5299 8.04979H4.8999L6.5299 4.02979" fill="black"/>
+                <path d="M1.63 4.02979V8.04979H0V4.02979" fill="white"/>
+                <path d="M1.62988 4.03V0H3.25988V4.03" fill="white"/>
+                <path d="M1.62988 8.04979L3.25988 4.02979H4.87988L3.25988 8.04979" fill="white"/>
+                <path d="M4.87988 4.03L6.50988 0H8.13988L6.50988 4.03" fill="white"/>
+                <path d="M17.9194 4.03V0H19.5494V4.03" fill="white"/>
+                <path d="M17.9195 4.02979V8.04979H16.2896V4.02979" fill="white"/>
+                <path d="M17.9197 0L16.2897 4.03H14.6597L16.2897 0" fill="white"/>
+                <path d="M14.6597 4.02979L13.0397 8.04979H11.4097L13.0397 4.02979" fill="white"/>
+                <path d="M11.4097 4.03V0H13.0397V4.03" fill="white"/>
+                <path d="M11.4098 4.02979V8.04979H9.77979V4.02979" fill="white"/>
+                <path d="M11.4099 0L9.7799 4.03H8.1499L9.7799 0" fill="white"/>
+                <path d="M8.1499 4.02979L6.5299 8.04979H4.8999L6.5299 4.02979" fill="white"/>
               </svg>
             </Link>
+            <span className="header-contact-text">Contact</span>
           </div>
 
           {/* Navigation */}
@@ -63,14 +64,14 @@ export default function TermsPage() {
                 letterSpacing: '-0.01em',
                 margin: 0,
                 fontFamily: 'neueSingular-D-SemiBold, sans-serif',
-                color: '#000000',
+                color: '#ffffff',
               }}
             >
               Terms of Use &amp; Acceptable Conduct
             </h1>
             <p
               style={{
-                color: '#8A8A8A',
+                color: '#d1d5db',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1.25rem",
                 lineHeight: '1.3',
@@ -86,7 +87,7 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -99,9 +100,9 @@ export default function TermsPage() {
 
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -113,7 +114,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -128,9 +129,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -142,7 +143,7 @@ export default function TermsPage() {
             
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -155,7 +156,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -169,9 +170,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -182,9 +183,9 @@ export default function TermsPage() {
             </h2>
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -195,7 +196,7 @@ export default function TermsPage() {
             </h3>
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -207,9 +208,9 @@ export default function TermsPage() {
             </p>
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -220,7 +221,7 @@ export default function TermsPage() {
             </h3>
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -233,9 +234,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -246,7 +247,7 @@ export default function TermsPage() {
             </h3>
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -259,9 +260,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -272,7 +273,7 @@ export default function TermsPage() {
             </h3>
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -287,9 +288,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -301,9 +302,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -315,7 +316,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -328,7 +329,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -341,7 +342,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -354,7 +355,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -367,9 +368,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -381,7 +382,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -394,7 +395,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -407,7 +408,7 @@ export default function TermsPage() {
 
             <div
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -434,9 +435,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -448,7 +449,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -463,9 +464,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -477,7 +478,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -492,9 +493,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -506,7 +507,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -521,9 +522,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -535,9 +536,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -549,7 +550,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -562,7 +563,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -575,9 +576,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -589,7 +590,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -602,9 +603,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -616,7 +617,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -631,9 +632,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -645,7 +646,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -658,7 +659,7 @@ export default function TermsPage() {
 
             <div
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -691,7 +692,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -706,9 +707,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -720,7 +721,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -735,9 +736,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -749,7 +750,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -764,9 +765,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -778,7 +779,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -791,7 +792,7 @@ export default function TermsPage() {
 
             <div
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -818,7 +819,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -833,9 +834,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -847,9 +848,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -861,7 +862,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -874,9 +875,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -888,7 +889,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -901,9 +902,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -915,7 +916,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -930,9 +931,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -944,9 +945,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -958,7 +959,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -971,9 +972,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -985,7 +986,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -998,9 +999,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1012,7 +1013,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1025,9 +1026,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1039,7 +1040,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1054,9 +1055,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -1068,9 +1069,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1082,7 +1083,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1095,9 +1096,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1109,7 +1110,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1122,9 +1123,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1136,7 +1137,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1149,9 +1150,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1163,7 +1164,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1176,9 +1177,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1190,7 +1191,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1203,9 +1204,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1217,7 +1218,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1230,9 +1231,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1244,7 +1245,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1257,9 +1258,9 @@ export default function TermsPage() {
 
             <h3
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 600,
+                fontWeight: 500,
                 fontSize: "1.375rem",
                 lineHeight: 1.4,
                 letterSpacing: '-0.01em',
@@ -1271,7 +1272,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1286,9 +1287,9 @@ export default function TermsPage() {
           <div style={{ width: '100%', maxWidth: 800, margin: '0 auto', textAlign: 'left' }}>
             <h2
               style={{
-                color: '#000000',
+                color: '#ffffff',
                 fontFamily: 'Inter, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "1.625rem",
                 lineHeight: 1.45,
                 letterSpacing: '-0.01em',
@@ -1300,7 +1301,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,
@@ -1313,7 +1314,7 @@ export default function TermsPage() {
 
             <p
               style={{
-                color: '#2D2D2D',
+                color: '#a3a3a3',
                 fontFamily: 'Inter, sans-serif',
                 fontSize: "1rem",
                 lineHeight: 1.5,

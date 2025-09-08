@@ -69,7 +69,7 @@ a:link {
   src: url('/fonts/neueSingular-D-Medium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -78,7 +78,7 @@ a:link {
   src: url('/fonts/neueSingular-D-Light.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -87,41 +87,26 @@ a:link {
   src: url('/fonts/neueSingular-D-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-@font-face {
-  font-family: 'Inter_18pt-Regular';
-  src: url('/fonts/Inter_18pt-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: 'Inter_18pt-Medium';
-  src: url('/fonts/Inter_18pt-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+/* Import Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&display=swap');
 
 
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary-text: #1a1a1a;
-  --secondary-text: #4a4d5a;
-  --tertiary-text: #6b7280;
-  --placeholder-text: #9ca3af;
-  --error-color: #dc2626;
-  --success-color: #22c55e;
-  --border-color: rgba(0, 0, 0, 0.12);
-  --input-bg: linear-gradient(145deg, rgb(245, 247, 250) 0%, rgb(250, 252, 255) 100%);
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --primary-text: #ffffff;
+  --secondary-text: #e5e5e5;
+  --tertiary-text: #a3a3a3;
+  --placeholder-text: #6b7280;
+  --error-color: #ef4444;
+  --success-color: #10b981;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --input-bg: linear-gradient(145deg, rgb(17, 17, 17) 0%, rgb(26, 26, 26) 100%);
   --button-bg: linear-gradient(145deg, rgb(23, 25, 28) 0%, rgb(29, 32, 32) 100%);
   --button-hover-bg: linear-gradient(145deg, rgb(35, 38, 42) 0%, rgb(42, 46, 48) 100%);
 }
@@ -136,9 +121,12 @@ a:link {
 body {
   margin: 0;
   padding: 0;
-  background: hsl(225, 32%, 90%);
+  background: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+  background-size: 30px 30px, 100% 100%;
   color: var(--foreground);
-  font-family: 'Inter_18pt-Regular', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: -0.02em;
@@ -155,7 +143,10 @@ html {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: hsl(225, 32%, 90%);
+  background: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+  background-size: 30px 30px, 100% 100%;
   /* Safari-specific fixes */
   -webkit-overflow-scrolling: touch;
   background-attachment: scroll;
@@ -172,9 +163,11 @@ html {
   /* Fix for Safari address bar black background */
   @media screen and (max-width: 768px) {
     body {
-      background-color: hsl(225, 32%, 90%);
+      background: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+      background-size: 30px 30px, 100% 100%;
       background-attachment: scroll;
-      background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
@@ -238,13 +231,14 @@ html {
   }
 
             .bg-page-gradient {
-            /* Blue (#2563EB) at top/bottom, white in the middle */
+            /* Dark gradient with subtle depth */
             background: linear-gradient(
               to bottom,
-              rgba(37, 99, 235, 0.10) 0%,
-              rgba(255, 255, 255, 1) 35%,
-              rgba(255, 255, 255, 1) 65%,
-              rgba(37, 99, 235, 0.10) 100%
+              rgba(10, 10, 10, 1) 0%,
+              rgba(17, 17, 17, 1) 25%,
+              rgba(15, 15, 15, 1) 50%,
+              rgba(17, 17, 17, 1) 75%,
+              rgba(10, 10, 10, 1) 100%
             );
             background-attachment: scroll;
             background-size: cover;
@@ -261,16 +255,46 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: hsl(225, 32%, 90%);
+  background: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+  background-size: 30px 30px, 100% 100%;
   z-index: -1;
   pointer-events: none;
+}
+
+
+/* Blue gradient circle at bottom */
+.blue-gradient-circle {
+  position: fixed;
+  bottom: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.15) 0%, rgba(0, 212, 255, 0.05) 40%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
 }
 
 .min-h-dvh {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: hsl(225, 32%, 90%);
+  background: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+  background-size: 30px 30px, 100% 100%;
 }
 
 /* Top Banner */
@@ -295,7 +319,7 @@ body::before {
   color: var(--primary-text);
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter_18pt-Medium', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Header */
@@ -381,7 +405,7 @@ body::before {
   padding: 0 16px;
   color: var(--secondary-text) !important;
   font-size: clamp(11px, 2.8vw, 13px);
-  font-family: 'Inter_18pt-Regular', sans-serif !important;
+  font-family: 'Inter', sans-serif !important;
   letter-spacing: -0.01em;
   line-height: calc(1em + 4px);
   text-decoration: none !important;
@@ -449,6 +473,23 @@ body::before {
   outline: none !important;
 }
 
+/* Header Contact Text */
+.header-contact-text {
+  color: var(--secondary-text);
+  font-size: 0.8125rem;
+  font-weight: 450;
+  letter-spacing: -0.02em;
+  line-height: calc(1em + 4px);
+  font-family: 'Inter', sans-serif;
+  margin-left: 1.5rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.header-contact-text:hover {
+  color: #60a5fa;
+}
+
 /* Header Waitlist Button */
 .header-waitlist-button {
   display: inline-flex;
@@ -458,13 +499,13 @@ body::before {
   padding: 0 0.75rem;
   color: #ffffff;
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: 450;
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter_18pt-Regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   border-radius: 0.5rem;
-  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(to bottom, #3b82f6 0%, #1d4ed8 100%);
   border: none;
   transition: opacity 0.2s ease;
   user-select: none;
@@ -591,9 +632,9 @@ a.contact-text:focus,
 
 .brands-waiting-text {
   color: var(--primary-text);
-  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 450;
   letter-spacing: -0.01em;
   line-height: calc(1em + 4px);
   margin: 0;
@@ -640,13 +681,13 @@ a.contact-text:focus,
   font-weight: 300;
   font-family: 'neueSingular-D-Light', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.05;
-  margin: 0 0 32px 0;
+  margin: 0 0 24px 0;
   letter-spacing: -0.04em;
   width: 100%;
 }
 
 .subheader {
-  font-family: 'Inter_18pt-Regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 22px !important;
   line-height: 1.4;
   text-align: center;
@@ -678,7 +719,15 @@ a.contact-text:focus,
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #3a3a3a 50%, #2d2d2d 75%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e5e5e5 25%, #d1d5db 50%, #e5e5e5 75%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.success-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -690,7 +739,7 @@ a.contact-text:focus,
 }
 
 .headline-secondary {
-  background: linear-gradient(183deg, rgba(236, 241, 253, 0) 13.9%, rgba(236, 241, 253, 0.3) 121.71%), linear-gradient(0deg, #2E3038, #2E3038);
+  background: linear-gradient(183deg, rgba(255, 255, 255, 0) 13.9%, rgba(255, 255, 255, 0.3) 121.71%), linear-gradient(0deg, #e5e5e5, #a3a3a3);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -702,14 +751,29 @@ a.contact-text:focus,
   text-align: center;
   font-size: clamp(16px, 3vw, 18px);
   line-height: 1.4;
-  background: linear-gradient(96.56deg, #667799 21.01%, #94A0B8 34.62%, #667799 47.64%, #667799 69.29%, #94A0B8 79.76%, #667799 90.35%);
+  background: linear-gradient(96.56deg, #a3a3a3 21.01%, #d1d5db 34.62%, #a3a3a3 47.64%, #a3a3a3 69.29%, #d1d5db 79.76%, #a3a3a3 90.35%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
-  font-family: 'Inter_18pt-Medium', sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: -0.05em;
   font-weight: 500;
+}
+
+.eyebrow-accent {
+  text-align: center;
+  font-size: clamp(14px, 3.2vw, 18px);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
 }
 
 /* Subheadline */
@@ -717,9 +781,9 @@ a.contact-text:focus,
   text-align: center;
   font-size: clamp(16px, 2.8vw, 20px);
   line-height: 1.3;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 28px;
-  font-family: 'Inter_18pt-Medium', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 
@@ -754,33 +818,36 @@ a.contact-text:focus,
   width: 85%;
   max-width: 450px;
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
   padding: 1px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   margin: 0;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: .15s;
-  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .input-group:hover {
-  --tw-shadow: 0 5px 10px rgba(0, 0, 0, 0.10);
-  --tw-shadow-colored: 0 5px 10px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+
 .input-group:focus-within {
-  background: #ffffff;
-  border: 1px solid #ffffff;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .input-group:has(.email-input:not(:placeholder-shown)) {
-  background: #ffffff;
-  border: 1px solid #ffffff;
+  background: rgba(10, 10, 10, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .input-group.error {
@@ -806,8 +873,10 @@ a.contact-text:focus,
 
 
 .input-group.error {
-  background: #ffffff !important;
+  background: rgba(10, 10, 10, 0.9) !important;
   border: 1px solid #dc2626 !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
 }
 
 /* Email Input */
@@ -823,7 +892,7 @@ a.contact-text:focus,
   line-height: calc(1em + 4px);
   color: var(--primary-text);
   text-align: left;
-  font-family: 'Inter_18pt-Regular', monospace;
+  font-family: 'Inter', monospace;
   /* Mobile input optimizations */
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
@@ -833,7 +902,7 @@ a.contact-text:focus,
 
 .email-input::placeholder {
   color: var(--placeholder-text);
-  font-family: 'Inter_18pt-Regular', monospace;
+  font-family: 'Inter', monospace;
 }
 
 .email-input:disabled {
@@ -841,8 +910,10 @@ a.contact-text:focus,
 }
 
 .input-group:has(.email-input:disabled) {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .input-group.error .email-input {
@@ -851,7 +922,7 @@ a.contact-text:focus,
 
 .input-group.error .email-input::placeholder {
   color: var(--placeholder-text);
-  font-family: 'Inter_18pt-Regular', monospace;
+  font-family: 'Inter', monospace;
 }
 
 /* URL Input */
@@ -896,17 +967,17 @@ a.contact-text:focus,
   padding: 0 16px;
   white-space: nowrap;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 450;
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter_18pt-Regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   z-index: 3;
   border-radius: 0.75rem;
-  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(to bottom, #3b82f6 0%, #1d4ed8 100%);
   border: none;
   transform: translateY(-50%);
-  transition: opacity 0.2s ease;
-  will-change: box-shadow;
+  transition: all 0.2s ease;
+  will-change: box-shadow, background, border;
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   user-select: none;
@@ -934,9 +1005,6 @@ a.contact-text:focus,
 
 
 
-.submit-button:hover {
-  opacity: 0.95;
-}
 
 .submit-button.submitted {
   opacity: 0.7;
@@ -948,20 +1016,20 @@ a.contact-text:focus,
 }
 
 .submit-button:disabled {
-  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: linear-gradient(to bottom, #1e40af 0%, #1e3a8a 100%);
   border: none;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .submit-button.loading {
-  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+  background: linear-gradient(to bottom, #2563eb 0%, #1d4ed8 100%) !important;
   border: none !important;
   cursor: not-allowed;
 }
 
 .submit-button:disabled:not(.loading) {
-  background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+  background: linear-gradient(to bottom, #1e40af 0%, #1e3a8a 100%) !important;
   border: none !important;
   cursor: not-allowed;
   opacity: 0.6;
@@ -1008,7 +1076,7 @@ a.contact-text:focus,
   color: rgba(220, 38, 38, 0.9);
   min-height: 20px;
   transition: opacity 0.4s ease;
-  font-family: 'Inter_18pt-Medium', sans-serif;
+  font-family: 'Inter', sans-serif;
   z-index: 10;
 }
 
@@ -1049,7 +1117,7 @@ a.contact-text:focus,
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter_18pt-Medium', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .success-content svg {
@@ -1062,17 +1130,30 @@ a.contact-text:focus,
   margin-top: auto;
   height: 2.5rem;
   position: relative;
+  z-index: 1002;
+  background: #0a0a0a;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #0a0a0a;
+  z-index: -1;
 }
 
 .footer-border {
   position: absolute;
   top: -20px;
-  height: 3px;
-  width: calc(100% - 48px);
-  max-width: 1152px;
+  height: 2px;
+  width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(180deg, #E5E9F2 0%, #D0D7E7 100%);
+  background: linear-gradient(90deg, #0f0f0f 0%, #2a2a2a 50%, #0f0f0f 100%);
+  z-index: 1001;
 }
 
 .footer-container {
@@ -1080,6 +1161,8 @@ a.contact-text:focus,
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1003;
 }
 
 .footer-content {
@@ -1093,7 +1176,8 @@ a.contact-text:focus,
 .copyright {
   font-size: clamp(11px, 2.8vw, 13px);
   line-height: calc(1em + 4px);
-  font-family: 'Inter_18pt-Medium', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 450;
   letter-spacing: -0.01em;
   color: var(--tertiary-text);
   white-space: nowrap;
@@ -1171,34 +1255,34 @@ a.contact-text:focus,
 }
 
 .fonts-loaded .subheader {
-  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .error-message,
 .fonts-loaded .success-content {
-  font-family: 'Inter_18pt-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .submit-button {
-  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .email-input,
 .fonts-loaded .email-input::placeholder {
-  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .copyright,
 .fonts-loaded .brands-waiting-text {
-  font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .contact-text {
-  font-family: 'Inter_18pt-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .fonts-loaded .eyebrow {
-  font-family: 'Inter_18pt-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Mobile font loading optimization */
@@ -1209,34 +1293,34 @@ a.contact-text:focus,
   }
   
   .subheader {
-    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .error-message,
   .success-content {
-    font-family: 'Inter_18pt-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .submit-button {
-    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .email-input,
   .email-input::placeholder {
-    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .copyright,
   .brands-waiting-text {
-    font-family: 'Inter_18pt-Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .contact-text {
-    font-family: 'Inter_18pt-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
   
   .eyebrow {
-    font-family: 'Inter_18pt-Medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
   }
 }
 
@@ -1819,7 +1903,7 @@ a.contact-text:focus,
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
-  font-family: 'Inter_18pt-Regular', sans-serif;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   border-radius: 0.75rem;
   background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
