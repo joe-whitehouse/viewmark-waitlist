@@ -260,7 +260,7 @@ export default function HomePage() {
               </p>
               
               {/* Invisible Form Container - Maintains Spacing */}
-              <div className="form-container" style={{ visibility: 'hidden', height: 'auto' }}>
+              <div className="form-container" style={{ visibility: 'hidden', height: 'auto', minHeight: '50px' }}>
                 <div className="input-group">
                   <div className="input-wrapper">
                     <input
