@@ -156,7 +156,7 @@ export default function HomePage() {
                      <path d="M8.1499 4.02979L6.5299 8.04979H4.8999L6.5299 4.02979" fill="white"/>
                    </svg>
                    </Link>
-                   <span className="header-contact-text">Contact</span>
+                   <a href="mailto:hello@viewmark.co" className="header-contact-text">Contact</a>
                  </div>
           
           {/* Navigation */}

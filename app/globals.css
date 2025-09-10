@@ -54,12 +54,12 @@ a:link {
 .link-inline:visited,
 .link-inline:active,
 .link-inline:focus {
-  color: #2563EB !important;
+  color: var(--blue-loading) !important;
   text-decoration: none !important;
   transition: color 0.2s ease-in-out; /* Smooth color transition */
 }
 .link-inline:hover {
-  color: #1D4ED8 !important; /* Darker blue on hover */
+  color: var(--blue-dark) !important; /* Darker blue on hover */
   text-decoration: none !important;
 }
 
@@ -109,6 +109,15 @@ a:link {
   --input-bg: linear-gradient(145deg, rgb(17, 17, 17) 0%, rgb(26, 26, 26) 100%);
   --button-bg: linear-gradient(145deg, rgb(23, 25, 28) 0%, rgb(29, 32, 32) 100%);
   --button-hover-bg: linear-gradient(145deg, rgb(35, 38, 42) 0%, rgb(42, 46, 48) 100%);
+  
+  /* Standardized Blue Color Palette */
+  --blue-light: #60a5fa;
+  --blue-medium: #3b82f6;
+  --blue-dark: #1d4ed8;
+  --blue-lighter: #93c5fd;
+  --blue-loading: #2563eb;
+  --blue-disabled-light: #1e40af;
+  --blue-disabled-dark: #1e3a8a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -484,10 +493,26 @@ body::before {
   margin-left: 1.5rem;
   transition: color 0.2s ease;
   cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 .header-contact-text:hover {
-  color: #60a5fa;
+  color: var(--blue-light);
+  opacity: 0.95;
+}
+
+.header-contact-text:visited {
+  color: var(--secondary-text);
+}
+
+.header-contact-text:visited:hover {
+  color: var(--blue-light);
   opacity: 0.95;
 }
 
@@ -506,7 +531,7 @@ body::before {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   text-decoration: none;
   border-radius: 0.5rem;
-  background: linear-gradient(to bottom, #3b82f6 0%, #1d4ed8 100%);
+  background: linear-gradient(to bottom, var(--blue-medium) 0%, var(--blue-dark) 100%);
   border: none;
   transition: opacity 0.2s ease;
   user-select: none;
@@ -728,7 +753,7 @@ a.contact-text:focus,
 }
 
 .success-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-medium) 50%, var(--blue-lighter) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -770,7 +795,7 @@ a.contact-text:focus,
   text-transform: uppercase;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
+  background: linear-gradient(135deg, var(--blue-light) 0%, var(--blue-medium) 50%, var(--blue-lighter) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -974,7 +999,7 @@ a.contact-text:focus,
   font-family: 'Inter', sans-serif;
   z-index: 3;
   border-radius: 0.75rem;
-  background: linear-gradient(to bottom, #3b82f6 0%, #1d4ed8 100%);
+  background: linear-gradient(to bottom, var(--blue-medium) 0%, var(--blue-dark) 100%);
   border: none;
   transform: translateY(-50%);
   transition: all 0.2s ease;
@@ -1017,20 +1042,20 @@ a.contact-text:focus,
 }
 
 .submit-button:disabled {
-  background: linear-gradient(to bottom, #1e40af 0%, #1e3a8a 100%);
+  background: linear-gradient(to bottom, var(--blue-disabled-light) 0%, var(--blue-disabled-dark) 100%);
   border: none;
   cursor: not-allowed;
   opacity: 0.6;
 }
 
 .submit-button.loading {
-  background: linear-gradient(to bottom, #2563eb 0%, #1d4ed8 100%) !important;
+  background: linear-gradient(to bottom, var(--blue-loading) 0%, var(--blue-dark) 100%) !important;
   border: none !important;
   cursor: not-allowed;
 }
 
 .submit-button:disabled:not(.loading) {
-  background: linear-gradient(to bottom, #1e40af 0%, #1e3a8a 100%) !important;
+  background: linear-gradient(to bottom, var(--blue-disabled-light) 0%, var(--blue-disabled-dark) 100%) !important;
   border: none !important;
   cursor: not-allowed;
   opacity: 0.6;
@@ -1130,6 +1155,91 @@ a.contact-text:focus,
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* Upper Footer */
+.upper-footer {
+  margin-top: auto;
+  padding: 1.5rem 0;
+  background: #0a0a0a;
+  position: relative;
+  z-index: 1001;
+}
+
+.upper-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to bottom, #2a2a2a 0%, #0f0f0f 100%);
+  z-index: 1002;
+}
+
+.upper-footer-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.upper-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.upper-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-logo-link:hover {
+  opacity: 0.8;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 18px;
+}
+
+.upper-footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link {
+  color: var(--tertiary-text);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.footer-link:hover {
+  color: var(--blue-light);
+}
+
+.footer-text {
+  color: var(--secondary-text);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 /* Footer */
 .footer {
   margin-top: auto;
@@ -1153,11 +1263,11 @@ a.contact-text:focus,
 .footer-border {
   position: absolute;
   top: -20px;
-  height: 2px;
+  height: 1px;
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, #0f0f0f 0%, #2a2a2a 50%, #0f0f0f 100%);
+  background: linear-gradient(to bottom, #2a2a2a 0%, #0f0f0f 100%);
   z-index: 1001;
 }
 
@@ -1182,7 +1292,7 @@ a.contact-text:focus,
   font-size: clamp(11px, 2.8vw, 13px);
   line-height: calc(1em + 4px);
   font-family: 'Inter', sans-serif;
-  font-weight: 450;
+  font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--tertiary-text);
   white-space: nowrap;
@@ -1366,6 +1476,21 @@ a.contact-text:focus,
   .header-container {
     max-width: 1200px;
     padding: 0 24px;
+  }
+  
+  .upper-footer-container {
+    max-width: 1200px;
+    padding: 0 24px;
+  }
+  
+  .upper-footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .upper-footer-left {
+    gap: 1.5rem;
   }
   
   .footer-container {
