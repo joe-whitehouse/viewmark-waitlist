@@ -1192,6 +1192,8 @@ a.contact-text:focus,
   letter-spacing: -0.02em;
   line-height: calc(1em + 4px);
   font-family: 'Inter', sans-serif;
+  word-break: keep-all;
+  white-space: nowrap;
 }
 
 .success-content svg {
@@ -2116,6 +2118,8 @@ a.contact-text:focus,
     line-height: 1.1 !important;
     letter-spacing: -0.06em !important;
     margin: 0 0 20px 0 !important;
+    word-break: keep-all !important;
+    white-space: normal !important;
   }
   
   .success-fade-in.subheader {

@@ -74,6 +74,10 @@ export default function HomePage() {
           // Wait for fade out animation, then show success immediately
           setTimeout(() => {
             updateFormState({ showSuccess: true, isFadingOut: false });
+            // Reset scroll position to center on mobile
+            if (window.innerWidth <= 768) {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
           }, 600);
         }, 1000);
       } else {
@@ -103,6 +107,10 @@ export default function HomePage() {
           // Wait for fade out animation, then show success immediately
           setTimeout(() => {
             updateFormState({ showSuccess: true, isFadingOut: false });
+            // Reset scroll position to center on mobile
+            if (window.innerWidth <= 768) {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
           }, 600);
         }, 1000);
       }
