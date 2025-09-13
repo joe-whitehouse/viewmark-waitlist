@@ -167,12 +167,19 @@ html {
     /* iOS Safari specific */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    /* Disable scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
   }
   
   /* Fix for Safari address bar black background */
   @media screen and (max-width: 768px) {
     html {
       background-color: rgb(10, 11, 12);
+      /* Disable scrolling on mobile */
+      overflow: hidden;
+      overscroll-behavior: none;
+      -webkit-overflow-scrolling: touch;
     }
     
     body {
@@ -182,6 +189,10 @@ html {
       background-position: center;
       background-repeat: no-repeat;
       background-color: rgb(10, 11, 12);
+      /* Disable scrolling on mobile */
+      overflow: hidden;
+      overscroll-behavior: none;
+      -webkit-overflow-scrolling: touch;
     }
     
     /* Fix scroll bounce background on mobile */
