@@ -2114,7 +2114,7 @@ a.contact-text:focus,
 /* Ensure success page text positioning matches waitlist page exactly */
 @media (max-width: 768px) {
   .success-fade-in.headline {
-    font-size: clamp(48px, 6vw, 72px) !important;
+    font-size: clamp(52px, 14vw, 60px) !important;
     line-height: 1.1 !important;
     letter-spacing: -0.06em !important;
     margin: 0 0 20px 0 !important;
@@ -2129,6 +2129,16 @@ a.contact-text:focus,
     text-align: center !important;
     margin: 0 0 24px 0 !important;
     color: rgb(199 201 209/var(--tw-text-opacity,1)) !important;
+  }
+}
+
+/* Match success headline to main headline on smaller mobile */
+@media (max-width: 480px) {
+  .success-fade-in.headline {
+    font-size: clamp(48px, 13vw, 52px) !important;
+    margin: 0 0 16px 0 !important;
+    word-break: keep-all !important;
+    white-space: normal !important;
   }
 }
 
