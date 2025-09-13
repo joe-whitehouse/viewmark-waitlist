@@ -145,28 +145,14 @@ export default function HomePage() {
           {/* Logo Tag */}
           <div className="logo-tag-container">
             <Link href="/" className="logo-link" onClick={resetToOriginalState}>
-              <svg
-                width="40"
-                height="18"
-                viewBox="0 0 20 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              {/* Logo + wordmark for all screen sizes */}
+              <img
+                src="/logo-full.svg"
+                alt="Viewmark Logo"
                 className="logo-tag"
-                aria-label="Viewmark Logo"
-              >
-                <path d="M1.63 4.02979V8.04979H0V4.02979" fill="white"/>
-                <path d="M1.62988 4.03V0H3.25988V4.03" fill="white"/>
-                <path d="M1.62988 8.04979L3.25988 4.02979H4.87988L3.25988 8.04979" fill="white"/>
-                <path d="M4.87988 4.03L6.50988 0H8.13988L6.50988 4.03" fill="white"/>
-                <path d="M17.9194 4.03V0H19.5494V4.03" fill="white"/>
-                <path d="M17.9195 4.02979V8.04979H16.2896V4.02979" fill="white"/>
-                <path d="M17.9197 0L16.2897 4.03H14.6597L16.2897 0" fill="white"/>
-                <path d="M14.6597 4.02979L13.0397 8.04979H11.4097L13.0397 4.02979" fill="white"/>
-                <path d="M11.4097 4.03V0H13.0397V4.03" fill="white"/>
-                <path d="M11.4098 4.02979V8.04979H9.77979V4.02979" fill="white"/>
-                <path d="M11.4099 0L9.7799 4.03H8.1499L9.7799 0" fill="white"/>
-                <path d="M8.1499 4.02979L6.5299 8.04979H4.8999L6.5299 4.02979" fill="white"/>
-              </svg>
+                width="124"
+                height="18"
+              />
             </Link>
           </div>
           
