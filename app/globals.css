@@ -142,11 +142,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  /* Safari-specific fixes */
-  -webkit-overflow-scrolling: touch;
-  background-attachment: scroll;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   position: relative;
 
 }
@@ -154,14 +152,12 @@ body {
 html {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   background: rgb(10 11 12/var(--tw-bg-opacity,1));
   background-size: 100% 100%;
   /* Safari-specific fixes */
   -webkit-overflow-scrolling: touch;
   background-attachment: scroll;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 /* Safari-specific fixes for black bars and link styling */
@@ -298,10 +294,8 @@ body::before {
 .min-h-dvh {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
   background: rgb(10 11 12/var(--tw-bg-opacity,1));
   background-size: 100% 100%;
-  overflow: hidden;
 }
 
 /* Top Banner */
@@ -651,7 +645,8 @@ a.contact-text:focus,
   z-index: 1;
   align-items: center;
   flex: 1;
-  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 /* Brands Waiting Text */
