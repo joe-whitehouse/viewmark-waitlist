@@ -1333,11 +1333,16 @@ export default function TermsPage() {
         <div className="footer-border"></div>
         <div className="footer-container">
           <div className="footer-content">
-            {/* Copyright */}
-            <div className="copyright">
-              © 2025 Viewmark. All rights reserved.
+            {/* Left side - All content */}
+            <div className="footer-left">
+              <div className="copyright">
+                © 2025 Viewmark. All rights reserved.
+              </div>
+              <a href="/terms" className="footer-link">Terms of Service</a>
+              <a href="/privacy" className="footer-link">Privacy Policy</a>
             </div>
-            {/* Social media icons */}
+            
+            {/* Right side - Social media icons */}
             <div className="social-links">
               <a 
                 href="https://x.com/viewmarkco" 
