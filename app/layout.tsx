@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         },
         other: {
           'apple-mobile-web-app-capable': 'yes',
-          'apple-mobile-web-app-status-bar-style': 'default',
+          'apple-mobile-web-app-status-bar-style': 'black-translucent',
           'apple-mobile-web-app-title': 'Viewmark',
         },
 };
@@ -74,10 +74,10 @@ export default function RootLayout({
         
         {/* iOS PWA and theming support */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Viewmark" />
-        <meta name="theme-color" content="#FFFFFF" />
-        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="theme-color" content="#0A0B0C" />
+        <meta name="msapplication-TileColor" content="#0A0B0C" />
       </head>
       <body>
         <FontLoader />
