@@ -125,7 +125,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-dvh flex flex-col relative z-20 overflow-hidden">
+    <div className="min-h-dvh flex flex-col relative z-20">
       
       {/* Header/Nav */}
       <header className="header">
@@ -321,7 +321,7 @@ export default function HomePage() {
           width="1678" 
           height="685" 
           decoding="async" 
-          className="pointer-events-none absolute left-1/2 bottom-0 -z-10 w-[900px] max-w-none -translate-x-1/2 xl:w-[1678px] xl:-bottom-[100px] md:w-[900px]" 
+          className="pointer-events-none absolute left-1/2 -bottom-[150px] -z-10 w-[900px] max-w-none -translate-x-1/2 xl:w-[1678px] xl:-bottom-[300px] md:w-[900px]" 
           style={{color: "transparent"}} 
           src="/d58221aa8f3a4800cd4f60a05760a8bc.svg"
         />
