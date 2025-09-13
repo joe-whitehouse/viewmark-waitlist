@@ -29,6 +29,10 @@ export default function HomePage() {
       isLoading: false,
       isFadingOut: false
     });
+    // Reset scroll position to center on mobile when returning to form
+    if (window.innerWidth <= 768) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const validateEmail = (email: string) => {
@@ -177,6 +181,10 @@ export default function HomePage() {
                   const emailInput = document.querySelector('.email-input') as HTMLInputElement;
                   if (emailInput) {
                     emailInput.focus();
+                  }
+                  // Reset scroll position to center on mobile when clicking Join Waitlist
+                  if (window.innerWidth <= 768) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   }
                 }
               }}
