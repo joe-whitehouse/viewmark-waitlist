@@ -125,7 +125,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-dvh flex flex-col relative z-20">
+    <div className="h-dvh flex flex-col relative z-20 overflow-hidden">
       
       {/* Header/Nav */}
       <header className="header">
