@@ -134,6 +134,7 @@ body {
   padding: 0;
   background: rgb(10 11 12/var(--tw-bg-opacity,1));
   background-size: 100% 100%;
+  background-color: rgb(10, 11, 12);
   color: var(--foreground);
   font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
     Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji",
@@ -156,6 +157,8 @@ html {
   -webkit-overflow-scrolling: touch;
   background-attachment: scroll;
   overflow-x: hidden;
+  /* Fix scroll background on mobile */
+  background-color: rgb(10, 11, 12);
 }
 
 /* Safari-specific fixes for black bars and link styling */
@@ -168,12 +171,22 @@ html {
   
   /* Fix for Safari address bar black background */
   @media screen and (max-width: 768px) {
+    html {
+      background-color: rgb(10, 11, 12);
+    }
+    
     body {
       background: rgb(10 11 12/var(--tw-bg-opacity,1));
       background-size: 100% 100%;
       background-attachment: scroll;
       background-position: center;
       background-repeat: no-repeat;
+      background-color: rgb(10, 11, 12);
+    }
+    
+    /* Fix scroll bounce background on mobile */
+    .min-h-dvh {
+      background-color: rgb(10, 11, 12);
     }
   }
 }
@@ -846,7 +859,7 @@ a.contact-text:focus,
 
 .email-form {
   width: 100%;
-  max-width: 420px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -861,8 +874,8 @@ a.contact-text:focus,
 .input-group {
   display: flex;
   align-items: center;
-  width: 85%;
-  max-width: 450px;
+  width: 100%;
+  max-width: 400px;
   position: relative;
   border: 1px solid #3e3e3e;
   border-radius: 0.5rem;
@@ -1474,13 +1487,13 @@ a.contact-text:focus,
   }
   
   .email-form {
-    max-width: 400px;
+    max-width: 360px;
     width: 100%;
   }
   
   .input-group {
     width: 100%;
-    max-width: 400px;
+    max-width: 360px;
   }
   
   .error-message,
@@ -1527,6 +1540,19 @@ a.contact-text:focus,
   .footer-container {
     max-width: 1200px;
     padding: 0 24px;
+  }
+}
+
+/* Tablet breakpoint - constrain width to never exceed header text width */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .email-form {
+    max-width: 360px;
+    width: 100%;
+  }
+  
+  .input-group {
+    width: 100%;
+    max-width: 360px;
   }
 }
 
@@ -1650,7 +1676,7 @@ a.contact-text:focus,
   }
   
   .email-form {
-    max-width: 400px;
+    max-width: 360px;
     width: 100%;
     margin-bottom: 0;
   }
@@ -1677,11 +1703,13 @@ a.contact-text:focus,
     white-space: nowrap;
   }
   
-  /* Mobile height optimization - ensure content fits within viewport */
+  /* Mobile height optimization - use flexbox for perfect viewport fitting */
   .main-content {
-    min-height: 0;
-    padding: 2rem 0;
+    flex: 1;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
   }
   
   .content-container {
@@ -1709,8 +1737,8 @@ a.contact-text:focus,
   /* iOS Safari specific height optimization */
   @supports (-webkit-touch-callout: none) {
     .main-content {
-      min-height: 0;
-      padding: 0.5rem 0;
+      flex: 1;
+      padding: 2rem 0;
     }
   }
 }
@@ -1765,8 +1793,11 @@ a.contact-text:focus,
   
   /* Extra small screen height optimization */
   .main-content {
-    min-height: 0;
-    padding: 0.5rem 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
   }
   
   .headline {
@@ -1812,7 +1843,7 @@ a.contact-text:focus,
   
   /* Form optimizations for very small screens */
   .email-form {
-    max-width: 380px;
+    max-width: 340px;
     padding: 0 8px;
   }
   
