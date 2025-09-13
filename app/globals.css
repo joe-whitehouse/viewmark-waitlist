@@ -92,7 +92,7 @@ a:link {
 }
 
 /* Import Inter from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600&display=swap');
+/* Google Fonts loaded via HTML link tag in layout.tsx */
 
 
 
