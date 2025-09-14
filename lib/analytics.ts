@@ -15,14 +15,13 @@ export function trackPageView() {
       sessionStorage.setItem('analytics_session_id', sessionId)
     }
     
-    // Send tracking data to unified Netlify Function
-    fetch('/.netlify/functions/track-interaction', {
+    // Send tracking data to Netlify Function
+    fetch('/.netlify/functions/track-pageview', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        interactionType: 'page_view',
         pagePath,
         userAgent,
         referrer,
