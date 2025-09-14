@@ -15,8 +15,8 @@ export function trackPageView() {
       sessionStorage.setItem('analytics_session_id', sessionId)
     }
     
-    // Send tracking data to our API
-    fetch('/api/track-pageview', {
+    // Send tracking data to Netlify Function
+    fetch('/.netlify/functions/track-pageview', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
