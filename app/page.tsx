@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import type { EmailSubmission, EmailResponse, FormState } from "@/lib/types";
+import { initAnalytics } from "@/lib/analytics";
 
 export default function HomePage() {
   const [formState, setFormState] = useState<FormState>({
@@ -134,6 +135,11 @@ export default function HomePage() {
     console.log('Body::after element exists:', afterElement.content !== 'none');
     console.log('Body::after background:', afterElement.background);
     console.log('Body::after z-index:', afterElement.zIndex);
+  }, []);
+
+  // Initialize analytics tracking
+  useEffect(() => {
+    initAnalytics();
   }, []);
 
   return (
