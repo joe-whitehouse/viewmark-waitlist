@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
     
     // Get client IP address
     const forwarded = request.headers.get('x-forwarded-for')
-    const ip = forwarded ? forwarded.split(',')[0] : request.ip || 'unknown'
+    const ip = forwarded ? forwarded.split(',')[0] : 'unknown'
     
     // Create Supabase client
     const supabase = createSupabaseClient()
