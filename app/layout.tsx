@@ -62,7 +62,7 @@ export default function RootLayout({
 
 
 
-        {/* Inter font from multiple CDNs for reliability */}
+        {/* Inter font with improved loading */}
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -73,16 +73,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          rel="preconnect"
-          href="https://rsms.me"
-        />
-        <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700&display=swap"
-        />
-        <link
-          rel="stylesheet"
-          href="https://rsms.me/inter/inter.css"
         />
         <script dangerouslySetInnerHTML={{
           __html: `
