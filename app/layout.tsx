@@ -62,7 +62,7 @@ export default function RootLayout({
 
 
 
-        {/* Online Inter font with fallback */}
+        {/* Inter font from multiple CDNs for reliability */}
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"
@@ -73,9 +73,34 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
+          rel="preconnect"
+          href="https://rsms.me"
+        />
+        <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700&display=swap"
         />
+        <link
+          rel="stylesheet"
+          href="https://rsms.me/inter/inter.css"
+        />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Font loading detection and fallback
+            if ('fonts' in document) {
+              document.fonts.ready.then(function() {
+                document.documentElement.classList.add('fonts-loaded');
+              });
+              
+              // Timeout fallback
+              setTimeout(function() {
+                if (!document.documentElement.classList.contains('fonts-loaded')) {
+                  document.documentElement.classList.add('fonts-fallback');
+                }
+              }, 3000);
+            }
+          `
+        }} />
 
         {/* Preload critical fonts to prevent FOUT */}
         <link

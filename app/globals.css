@@ -63,6 +63,16 @@ a:link {
   text-decoration: none !important;
 }
 
+/* Font loading optimization */
+html {
+  font-display: swap;
+}
+
+/* Fallback font loading */
+.fonts-loading * {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+}
+
 /* Font declarations with mobile optimization */
 @font-face {
   font-family: 'neueSingular-D-Medium';
