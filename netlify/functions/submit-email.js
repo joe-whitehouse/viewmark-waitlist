@@ -43,15 +43,33 @@ exports.handler = async function(event, context) {
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-    // Insert email into Supabase
+    // Insert email into both tables for unified tracking
+    const trimmedEmail = email.trim();
+    
+    // Insert into original waitlist_emails table
     const { error } = await supabase
       .from('waitlist_emails')
       .insert([
         { 
-          email: email.trim(),
+          email: trimmedEmail,
           created_at: new Date().toISOString()
         }
       ]);
+    
+    // Also insert into unified user_interactions table
+    if (!error) {
+      const { error: interactionError } = await supabase
+        .from('user_interactions')
+        .insert({
+          interaction_type: 'email_signup',
+          email: trimmedEmail,
+          created_at: new Date().toISOString()
+        });
+      
+      if (interactionError) {
+        console.error('Error tracking email signup in unified table:', interactionError);
+      }
+    }
 
     if (error) {
       console.error('Supabase error:', error);
