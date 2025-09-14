@@ -399,6 +399,25 @@ body::before {
   border: none;
 }
 
+/* Responsive logo display */
+.logo-mobile {
+  display: block;
+}
+
+.logo-desktop {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .logo-mobile {
+    display: none;
+  }
+  
+  .logo-desktop {
+    display: block;
+  }
+}
+
 
 .logo-tag:focus {
   outline: none;

@@ -151,11 +151,18 @@ export default function HomePage() {
           {/* Logo Tag */}
           <div className="logo-tag-container">
             <Link href="/" className="logo-link" onClick={resetToOriginalState}>
-              {/* Logo + wordmark for all screen sizes */}
+              {/* Responsive logo: logomark on mobile, full logo on desktop */}
+              <img
+                src="/logo-mark.svg"
+                alt="Viewmark Logo"
+                className="logo-tag logo-mobile"
+                width="40"
+                height="18"
+              />
               <img
                 src="/logo-full.svg"
                 alt="Viewmark Logo"
-                className="logo-tag"
+                className="logo-tag logo-desktop"
                 width="124"
                 height="18"
               />
