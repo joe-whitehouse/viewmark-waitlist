@@ -392,6 +392,13 @@ body::before {
   z-index: 20;
   display: flex;
   align-items: center;
+  height: 1.75rem; /* Match header button height */
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo-tag {

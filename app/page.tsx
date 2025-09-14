@@ -170,7 +170,7 @@ export default function HomePage() {
           </div>
           
           {/* Navigation */}
-          <div className="flex items-center space-x-4">
+          <div className="header-navigation">
             <a href="mailto:hello@viewmark.co" className="header-contact-text">Contact Us</a>
             <button
               onClick={() => {
