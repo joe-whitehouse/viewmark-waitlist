@@ -1557,7 +1557,6 @@ a.contact-text:focus,
   }
 }
 
-
 /* Mobile Responsive */
 /* Tablet breakpoint */
 @media (max-width: 1024px) {
@@ -1771,35 +1770,6 @@ a.contact-text:focus,
       padding: 1.5rem 0;
       min-height: 0;
     }
-  }
-  
-  /* FINAL OVERRIDE - Lock viewport height and hide background images */
-  .pointer-events-none.absolute {
-    display: none !important;
-  }
-  
-  .h-dvh {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100dvh !important;
-    max-height: 100dvh !important;
-    overflow: hidden !important;
-  }
-  
-  .header {
-    flex: 0 0 auto !important;
-  }
-  
-  .main-content {
-    flex: 1 1 auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-  
-  footer {
-    flex: 0 0 auto !important;
-    margin-top: auto !important;
   }
 }
 
