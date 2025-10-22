@@ -1571,13 +1571,13 @@ a.contact-text:focus,
   
   /* Header - don't grow */
   .header {
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
     outline: 3px solid cyan !important; /* DEBUG: Header boundary */
   }
   
   /* Main content - don't grow, just take natural space */
   .main-content {
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
     outline: 3px solid orange !important; /* DEBUG: Main content boundary */
     background: rgba(0, 255, 0, 0.1) !important; /* DEBUG: Main content fill */
   }
@@ -1585,7 +1585,7 @@ a.contact-text:focus,
   /* Footer - push to bottom but don't grow */
   .footer {
     margin-top: auto !important;
-    flex: 0 0 auto;
+    flex: 0 0 auto !important;
     outline: 5px solid yellow !important; /* DEBUG: Footer boundary */
     background: rgba(255, 0, 255, 0.3) !important; /* DEBUG: Footer fill */
   }
