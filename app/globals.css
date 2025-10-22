@@ -1557,7 +1557,7 @@ a.contact-text:focus,
   }
 }
 
-/* Prevent footer from extending on mobile */
+/* Prevent footer from extending on mobile with elastic scroll */
 @media (max-width: 768px) {
   /* Lock the main container to viewport height and clip at footer */
   .h-dvh {
@@ -1565,18 +1565,21 @@ a.contact-text:focus,
     max-height: 100dvh;
     overflow: hidden;
     position: relative;
-    clip-path: inset(0 0 0 0);
   }
   
-  /* Hide any overflow from background images */
+  /* Allow elastic/bouncy overscroll but prevent actual scroll */
   body {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+    overscroll-behavior-x: none;
   }
   
   html {
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: rgb(10, 11, 12);
   }
 }
 
