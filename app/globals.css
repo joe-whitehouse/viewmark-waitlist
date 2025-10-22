@@ -1557,29 +1557,11 @@ a.contact-text:focus,
   }
 }
 
-/* Prevent footer from extending on mobile with elastic scroll */
+/* Hide background images on mobile to prevent footer extending */
 @media (max-width: 768px) {
-  /* Lock html/body to prevent page scroll */
-  html {
-    overflow: hidden;
-    height: 100dvh;
-    background-color: rgb(10, 11, 12);
-  }
-  
-  body {
-    overflow: hidden;
-    height: 100dvh;
-    position: fixed;
-    width: 100%;
-  }
-  
-  /* Container handles internal scroll with elastic bounce */
-  .h-dvh {
-    height: 100dvh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
+  /* Hide the background gradient and pattern on mobile */
+  .pointer-events-none.absolute {
+    display: none !important;
   }
 }
 
