@@ -1575,16 +1575,25 @@ a.contact-text:focus,
     outline: 3px solid cyan !important; /* DEBUG: Header boundary */
   }
   
-  /* Main content - don't grow, just take natural space */
+  /* Main content - grow to fill space but constrain children */
   .main-content {
-    flex: 0 0 auto !important;
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    min-height: 0 !important;
     outline: 3px solid orange !important; /* DEBUG: Main content boundary */
     background: rgba(0, 255, 0, 0.1) !important; /* DEBUG: Main content fill */
   }
   
+  /* Content container - don't grow */
+  .content-container {
+    flex: 0 0 auto !important;
+  }
+  
   /* Footer - push to bottom but don't grow */
   .footer {
-    margin-top: auto !important;
+    margin-top: 0 !important;
     flex: 0 0 auto !important;
     outline: 5px solid yellow !important; /* DEBUG: Footer boundary */
     background: rgba(255, 0, 255, 0.3) !important; /* DEBUG: Footer fill */
