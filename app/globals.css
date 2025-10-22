@@ -1557,6 +1557,21 @@ a.contact-text:focus,
   }
 }
 
+/* Clip page content on mobile to prevent footer from extending */
+@media (max-width: 768px) {
+  .h-dvh {
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+  
+  /* Clip background images so they don't extend page height */
+  .pointer-events-none.absolute {
+    clip-path: inset(0 0 0 0);
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
 /* Mobile Responsive */
 /* Tablet breakpoint */
 @media (max-width: 1024px) {
