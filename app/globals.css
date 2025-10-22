@@ -2241,6 +2241,12 @@ a.contact-text:focus,
   opacity: 0;
 }
 
+/* Prevent background elements from animating - they should load immediately */
+.pointer-events-none.absolute {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
 /* 404 Page Button */
 .not-found-button {
   display: inline-flex;
