@@ -1557,11 +1557,26 @@ a.contact-text:focus,
   }
 }
 
-/* Hide background images on mobile to prevent footer extending */
+/* Fix footer positioning on mobile */
 @media (max-width: 768px) {
-  /* Hide the background gradient and pattern on mobile */
+  /* Show background images again */
   .pointer-events-none.absolute {
-    display: none !important;
+    display: block !important;
+  }
+  
+  /* Fix footer to bottom of viewport, remove auto margin */
+  .footer {
+    margin-top: 0 !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  /* Add padding to main content so it doesn't get hidden behind footer */
+  .main-content {
+    padding-bottom: 5rem;
   }
 }
 
