@@ -1557,17 +1557,22 @@ a.contact-text:focus,
   }
 }
 
-/* Clip page content on mobile to prevent footer from extending */
+/* Prevent footer from extending on mobile */
 @media (max-width: 768px) {
+  /* Lock the main container to viewport height */
   .h-dvh {
+    height: 100dvh;
     max-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* Hide any overflow from background images */
+  body {
     overflow: hidden;
   }
   
-  /* Clip background images so they don't extend page height */
-  .pointer-events-none.absolute {
-    clip-path: inset(0 0 0 0);
-    max-height: 100vh;
+  html {
     overflow: hidden;
   }
 }
