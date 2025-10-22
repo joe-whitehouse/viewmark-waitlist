@@ -76,23 +76,6 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700&display=swap"
         />
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Font loading detection and fallback
-            if ('fonts' in document) {
-              document.fonts.ready.then(function() {
-                document.documentElement.classList.add('fonts-loaded');
-              });
-              
-              // Timeout fallback
-              setTimeout(function() {
-                if (!document.documentElement.classList.contains('fonts-loaded')) {
-                  document.documentElement.classList.add('fonts-fallback');
-                }
-              }, 3000);
-            }
-          `
-        }} />
 
         {/* Preload critical fonts to prevent FOUT */}
         <link
