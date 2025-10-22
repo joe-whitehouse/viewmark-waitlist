@@ -1557,11 +1557,37 @@ a.contact-text:focus,
   }
 }
 
-/* Fix mobile layout - hide background images */
+/* Fix mobile layout - hide background images and push footer to bottom */
 @media (max-width: 768px) {
   /* Hide background images completely on mobile */
   .pointer-events-none.absolute {
     display: none !important;
+  }
+  
+  /* Make container flexbox to push footer down */
+  .h-dvh {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100dvh !important;
+  }
+  
+  /* Header - fixed size */
+  .header {
+    flex: 0 0 auto !important;
+  }
+  
+  /* Main content - grow to fill space */
+  .main-content {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Footer - fixed size at bottom */
+  footer {
+    flex: 0 0 auto !important;
+    margin-top: auto !important;
   }
 }
 
