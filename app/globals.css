@@ -136,7 +136,7 @@ body {
   padding: 0;
   background: rgb(10 11 12/var(--tw-bg-opacity,1));
   background-size: 100% 100%;
-  background-color: rgb(10, 11, 12);
+  background-color: #ff0000; /* Temporary red for testing */
   color: var(--foreground);
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   letter-spacing: -0.02em;
@@ -1566,12 +1566,27 @@ a.contact-text:focus,
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    outline: 3px solid lime !important; /* DEBUG: Container boundary */
   }
   
   /* Remove auto margin from footer so it doesn't push down */
   .footer {
     margin-top: 1rem !important;
     flex-shrink: 0;
+    outline: 5px solid yellow !important; /* DEBUG: Footer boundary */
+    background: rgba(255, 0, 255, 0.3) !important; /* DEBUG: Footer fill */
+  }
+  
+  /* Debug header */
+  .header {
+    outline: 3px solid cyan !important; /* DEBUG: Header boundary */
+  }
+  
+  /* Debug main content area */
+  .main-content,
+  main {
+    outline: 3px solid orange !important; /* DEBUG: Main content boundary */
+    background: rgba(0, 255, 0, 0.1) !important; /* DEBUG: Main content fill */
   }
   
   /* Clip background images at viewport bottom */
