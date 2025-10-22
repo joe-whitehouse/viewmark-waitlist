@@ -1568,7 +1568,9 @@ a.contact-text:focus,
   .h-dvh {
     display: flex !important;
     flex-direction: column !important;
-    min-height: 100dvh !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
   }
   
   /* Header - fixed size */
