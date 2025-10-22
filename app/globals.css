@@ -1559,27 +1559,27 @@ a.contact-text:focus,
 
 /* Prevent footer from extending on mobile with elastic scroll */
 @media (max-width: 768px) {
-  /* Lock the main container to viewport height and clip at footer */
+  /* Lock html/body to prevent page scroll */
+  html {
+    overflow: hidden;
+    height: 100dvh;
+    background-color: rgb(10, 11, 12);
+  }
+  
+  body {
+    overflow: hidden;
+    height: 100dvh;
+    position: fixed;
+    width: 100%;
+  }
+  
+  /* Container handles internal scroll with elastic bounce */
   .h-dvh {
     height: 100dvh;
-    max-height: 100dvh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* Allow elastic/bouncy overscroll but prevent actual scroll */
-  body {
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: auto;
-    overscroll-behavior-x: none;
-  }
-  
-  html {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background-color: rgb(10, 11, 12);
+    overscroll-behavior-y: contain;
   }
 }
 
