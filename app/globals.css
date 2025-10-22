@@ -1559,11 +1559,19 @@ a.contact-text:focus,
 
 /* Fix mobile layout to feel like one cohesive page */
 @media (max-width: 768px) {
+  /* Force body and html to not extend beyond viewport */
+  body, html {
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+  }
+  
   /* Constrain main container height to viewport */
   .h-dvh {
-    height: 100dvh;
-    max-height: 100dvh;
-    overflow: hidden;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
     display: flex;
     flex-direction: column;
     outline: 3px solid lime !important; /* DEBUG: Container boundary */
@@ -1599,11 +1607,11 @@ a.contact-text:focus,
     background: rgba(255, 0, 255, 0.3) !important; /* DEBUG: Footer fill */
   }
   
-  /* Clip background images at viewport bottom */
+  /* HARD CLIP background images - cut them off at viewport */
   .pointer-events-none.absolute {
-    clip-path: inset(0 0 0 0);
-    max-height: 100dvh;
-    overflow: hidden;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    clip-path: inset(0 0 50% 0) !important; /* Cut off bottom 50% of images */
   }
 }
 
