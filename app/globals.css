@@ -1557,11 +1557,11 @@ a.contact-text:focus,
   }
 }
 
-/* Fix footer positioning on mobile */
+/* Fix footer and background positioning on mobile */
 @media (max-width: 768px) {
-  /* Show background images again */
+  /* Fix background images to viewport so they don't scroll */
   .pointer-events-none.absolute {
-    display: block !important;
+    position: fixed !important;
   }
   
   /* Fix footer to bottom of viewport, remove auto margin */
@@ -1572,6 +1572,7 @@ a.contact-text:focus,
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 1002;
   }
   
   /* Add padding to main content so it doesn't get hidden behind footer */
