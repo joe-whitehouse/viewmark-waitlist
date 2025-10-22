@@ -1559,17 +1559,20 @@ a.contact-text:focus,
 
 /* Prevent footer from extending on mobile */
 @media (max-width: 768px) {
-  /* Lock the main container to viewport height */
+  /* Lock the main container to viewport height and clip at footer */
   .h-dvh {
     height: 100dvh;
     max-height: 100dvh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
+    clip-path: inset(0 0 0 0);
   }
   
   /* Hide any overflow from background images */
   body {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
   
   html {
