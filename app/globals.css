@@ -1561,7 +1561,7 @@ a.contact-text:focus,
 @media (max-width: 768px) {
   /* Constrain main container height to viewport */
   .h-dvh {
-    min-height: 100dvh;
+    height: 100dvh;
     max-height: 100dvh;
     overflow: hidden;
     display: flex;
@@ -1569,24 +1569,25 @@ a.contact-text:focus,
     outline: 3px solid lime !important; /* DEBUG: Container boundary */
   }
   
-  /* Remove auto margin from footer so it doesn't push down */
-  .footer {
-    margin-top: 1rem !important;
-    flex-shrink: 0;
-    outline: 5px solid yellow !important; /* DEBUG: Footer boundary */
-    background: rgba(255, 0, 255, 0.3) !important; /* DEBUG: Footer fill */
-  }
-  
-  /* Debug header */
+  /* Header - don't grow */
   .header {
+    flex: 0 0 auto;
     outline: 3px solid cyan !important; /* DEBUG: Header boundary */
   }
   
-  /* Debug main content area */
-  .main-content,
-  main {
+  /* Main content - don't grow, just take natural space */
+  .main-content {
+    flex: 0 0 auto;
     outline: 3px solid orange !important; /* DEBUG: Main content boundary */
     background: rgba(0, 255, 0, 0.1) !important; /* DEBUG: Main content fill */
+  }
+  
+  /* Footer - push to bottom but don't grow */
+  .footer {
+    margin-top: auto !important;
+    flex: 0 0 auto;
+    outline: 5px solid yellow !important; /* DEBUG: Footer boundary */
+    background: rgba(255, 0, 255, 0.3) !important; /* DEBUG: Footer fill */
   }
   
   /* Clip background images at viewport bottom */
