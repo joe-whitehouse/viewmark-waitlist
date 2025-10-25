@@ -324,7 +324,7 @@ export default function HomePage() {
         width="940" 
         height="147" 
         decoding="async" 
-        className="pointer-events-none absolute left-1/2 bottom-[1px] z-50 w-[900px] max-w-none -translate-x-1/2 dark:block xl:w-[960px] brightness-[200%] lg:brightness-150"
+        className="bg-pattern-image pointer-events-none absolute left-1/2 bottom-[1px] z-50 max-w-none -translate-x-1/2 dark:block brightness-[200%] lg:brightness-150"
         style={{color: "transparent"}} 
         src="/bg-pattern (1).png"
       />
@@ -336,7 +336,7 @@ export default function HomePage() {
           width="1678" 
           height="685" 
           decoding="async" 
-          className="pointer-events-none absolute left-1/2 -bottom-[150px] -z-10 w-[900px] max-w-none -translate-x-1/2 xl:w-[1678px] xl:-bottom-[300px] md:w-[900px]" 
+          className="bg-gradient-image pointer-events-none absolute left-1/2 -z-10 max-w-none -translate-x-1/2" 
           style={{color: "transparent"}} 
           src="/d58221aa8f3a4800cd4f60a05760a8bc.svg"
         />

@@ -444,7 +444,7 @@ body::before {
   height: 32px;
   padding: 0 16px;
   color: var(--secondary-text) !important;
-  font-size: clamp(11px, 2.8vw, 13px);
+  font-size: 13px;
   font-family: 'Inter', sans-serif !important;
   letter-spacing: -0.01em;
   line-height: calc(1em + 4px);
@@ -741,10 +741,10 @@ a.contact-text:focus,
   }
 }
 
-/* Headline */
+/* Headline - Fixed sizes at 3 breakpoints (keeping original desktop size) */
 .headline {
   text-align: center;
-  font-size: clamp(48px, 6vw, 72px);
+  font-size: 68px;
   font-weight: 500;
   font-family: 'neueSingular-D-Medium', sans-serif;
   line-height: 1.05;
@@ -758,28 +758,13 @@ a.contact-text:focus,
 
 .subheader {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 22px !important;
+  font-size: 24px;
   line-height: 1.4;
   text-align: center;
   margin: 0 0 32px 0;
   color: rgb(199 201 209/var(--tw-text-opacity,1));
   font-weight: 400;
   width: 100%;
-}
-
-/* Desktop size increase for subheader, email input, and button */
-@media (min-width: 1024px) {
-  .subheader {
-    font-size: 24px !important;
-  }
-  
-  .email-input {
-    font-size: 20px;
-  }
-  
-  .submit-button {
-    font-size: 20px;
-  }
 }
 
 
@@ -829,7 +814,7 @@ a.contact-text:focus,
 /* Eyebrow */
 .eyebrow {
   text-align: center;
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: 18px;
   line-height: 1.4;
   background: linear-gradient(96.56deg, #a3a3a3 21.01%, #d1d5db 34.62%, #a3a3a3 47.64%, #a3a3a3 69.29%, #d1d5db 79.76%, #a3a3a3 90.35%);
   -webkit-background-clip: text;
@@ -843,7 +828,7 @@ a.contact-text:focus,
 
 .eyebrow-accent {
   text-align: center;
-  font-size: clamp(14px, 3.2vw, 18px);
+  font-size: 18px;
   line-height: 1.4;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -859,7 +844,7 @@ a.contact-text:focus,
 /* Subheadline */
 .subheadline {
   text-align: center;
-  font-size: clamp(16px, 2.8vw, 20px);
+  font-size: 20px;
   line-height: 1.3;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 28px;
@@ -1308,7 +1293,7 @@ a.contact-text:focus,
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Background Pattern */
+/* Background Pattern - Scales with text at breakpoints */
 .bg-pattern-container {
   position: absolute;
   bottom: 0;
@@ -1320,15 +1305,13 @@ a.contact-text:focus,
 }
 
 .bg-pattern-image {
-  width: 100%;
-  max-width: 940px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-  opacity: 0.6;
-  mix-blend-mode: overlay;
-  margin: 0 auto;
+  width: 960px;
+}
+
+/* Gradient Background - Scales with text at breakpoints */
+.bg-gradient-image {
+  width: 1678px;
+  bottom: -300px;
 }
 
 /* Footer */
@@ -1578,6 +1561,27 @@ a.contact-text:focus,
   }
 }
 
+/* Tablet breakpoint - 3 fixed breakpoints only */
+@media (max-width: 1024px) {
+  .headline {
+    font-size: 60px;
+  }
+  
+  .subheader {
+    font-size: 22px;
+  }
+  
+  /* Scale down backgrounds ~12% to match text (60px/68px = 0.88) */
+  .bg-pattern-image {
+    width: 845px;
+  }
+  
+  .bg-gradient-image {
+    width: 1476px;
+    bottom: -264px;
+  }
+}
+
 /* Mobile breakpoint */
 @media (max-width: 768px) {
   .desktop-only {
@@ -1667,7 +1671,7 @@ a.contact-text:focus,
   }
   
   .headline {
-    font-size: clamp(52px, 14vw, 60px);
+    font-size: 52px;
     line-height: 1.1;
     letter-spacing: -0.06em;
     margin: 0 0 20px 0;
@@ -1677,7 +1681,7 @@ a.contact-text:focus,
   }
   
   .subheader {
-    font-size: 22px !important;
+    font-size: 20px;
     line-height: 1.4;
     max-width: 90vw;
     text-align: center;
@@ -1688,12 +1692,20 @@ a.contact-text:focus,
   .mobile-break {
     display: inline;
   }
-
   
+  /* Scale down backgrounds ~23% to match text (52px/68px = 0.76) */
+  .bg-pattern-image {
+    width: 730px;
+  }
+  
+  .bg-gradient-image {
+    width: 1275px;
+    bottom: -228px;
+  }
 
   
   .banner-text {
-    font-size: clamp(11px, 2.8vw, 13px);
+    font-size: 13px;
     line-height: 1.3;
   }
   
@@ -1721,7 +1733,7 @@ a.contact-text:focus,
   }
   
   .copyright {
-    font-size: clamp(11px, 2.8vw, 13px);
+    font-size: 13px;
     white-space: nowrap;
   }
   
@@ -1776,109 +1788,8 @@ a.contact-text:focus,
     padding: 0 24px;
   }
   
-  .headline {
-    font-size: clamp(48px, 5.5vw, 68px);
-  }
-  
   .mobile-break {
     display: none;
-  }
-}
-
-/* Very narrow screens where footer text needs to wrap */
-/* Small mobile breakpoint */
-@media (max-width: 480px) {
-  .header-container {
-    max-width: 1200px;
-    padding: 0 24px;
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    padding: 0 24px;
-  }
-  
-  .footer-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 0;
-  }
-  
-  .copyright {
-    font-size: clamp(11px, 2.8vw, 13px);
-    white-space: normal;
-  }
-  
-  .content-container {
-    padding: 0 12px;
-  }
-  
-  /* Extra small screen height optimization */
-  .main-content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-    min-height: 0;
-  }
-  
-  .headline {
-    font-size: clamp(48px, 13vw, 52px);
-    margin: 0 0 16px 0;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-  }
-  
-  .subheader {
-    font-size: 21px !important;
-    margin: 0 0 20px 0;
-  }
-  
-  .social-links {
-    gap: 12px;
-  }
-  
-  .social-link {
-    color: var(--tertiary-text) !important;
-  }
-  
-  .social-link svg {
-    color: #ffffff !important;
-    fill: #ffffff !important;
-    transition: opacity 0.3s ease;
-  }
-  
-  .social-link:hover svg {
-    opacity: 0.6;
-  }
-  
-  /* Override global link inheritance for social links on mobile */
-  .social-link,
-  .social-link:link,
-  .social-link:visited,
-  .social-link:hover,
-  .social-link:active,
-  .social-link:focus {
-    color: var(--tertiary-text) !important;
-  }
-  
-  /* Form optimizations for very small screens */
-  .email-form {
-    max-width: 340px;
-    padding: 0 8px;
-  }
-  
-  .contact-button {
-    font-size: 13px;
-  }
-  
-  
-  .footer-container {
-    padding: 0 24px;
   }
 }
 
@@ -2133,10 +2044,10 @@ a.contact-text:focus,
   animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Ensure success page text positioning matches waitlist page exactly */
+/* Success state matches main breakpoints exactly */
 @media (max-width: 768px) {
   .success-fade-in.headline {
-    font-size: clamp(52px, 14vw, 60px) !important;
+    font-size: 52px !important;
     line-height: 1.1 !important;
     letter-spacing: -0.06em !important;
     margin: 0 0 20px 0 !important;
@@ -2145,22 +2056,12 @@ a.contact-text:focus,
   }
   
   .success-fade-in.subheader {
-    font-size: 22px !important;
+    font-size: 20px !important;
     line-height: 1.4 !important;
     max-width: 90vw !important;
     text-align: center !important;
     margin: 0 0 24px 0 !important;
     color: rgb(199 201 209/var(--tw-text-opacity,1)) !important;
-  }
-}
-
-/* Match success headline to main headline on smaller mobile */
-@media (max-width: 480px) {
-  .success-fade-in.headline {
-    font-size: clamp(48px, 13vw, 52px) !important;
-    margin: 0 0 16px 0 !important;
-    word-break: keep-all !important;
-    white-space: normal !important;
   }
 }
 
@@ -2216,24 +2117,7 @@ a.contact-text:focus,
   }
 }
 
-/* Apply animations on page load - only hero content */
-.headline {
-  animation: fadeInUp 0.7s ease-out forwards;
-  animation-delay: 0.1s;
-  opacity: 0;
-}
-
-.subheader {
-  animation: fadeInUp 0.7s ease-out forwards;
-  animation-delay: 0.25s;
-  opacity: 0;
-}
-
-.form-container {
-  animation: fadeInUp 0.7s ease-out forwards;
-  animation-delay: 0.4s;
-  opacity: 0;
-}
+/* Page load animations removed to prevent flashing/jumping */
 
 /* Prevent background elements from animating - they should load immediately */
 .pointer-events-none.absolute {
