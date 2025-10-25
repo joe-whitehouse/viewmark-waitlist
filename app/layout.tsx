@@ -59,25 +59,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-
-
-
-        {/* Inter font with improved loading */}
+        {/* Preload critical fonts for optimal performance */}
         <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
+          rel="preload"
+          href="/fonts/InterVariable.woff2"
+          as="font"
+          type="font/woff2"
           crossOrigin="anonymous"
         />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;550;600;700&display=swap"
-        />
-
-        {/* Preload critical fonts to prevent FOUT */}
         <link
           rel="preload"
           href="/fonts/neueSingular-D-Medium.woff2"
